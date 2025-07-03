@@ -1098,16 +1098,6 @@ cultureInfo es-AR
 			          "tasa amortizacion acumulada": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "% Amort. Acum.": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
