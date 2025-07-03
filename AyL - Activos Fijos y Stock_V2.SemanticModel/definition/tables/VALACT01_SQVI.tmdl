@@ -1,0 +1,114 @@
+table VALACT01_SQVI
+	lineageTag: b4d80f65-b1f4-4dc9-b871-ea48c0f3a7f3
+
+	measure 'Neto Contable Nuevo' =
+			
+			SUM(VALACT01_SQVI[Val.adq.acum.]) + SUM(VALACT01_SQVI[AmoN acum.]) + SUM(VALACT01_SQVI[AmoN contab.])
+		formatString: #,0
+		lineageTag: 8229c525-70b8-4f5d-95a0-26884d063ead
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column 'Activo fijo'
+		dataType: string
+		lineageTag: ee383da9-f0c5-4e69-93d3-63c2ca070c8d
+		summarizeBy: none
+		sourceColumn: Activo fijo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Val.adq.acum.'
+		dataType: double
+		lineageTag: 58a37e2a-33de-4765-b891-d6bd17134616
+		summarizeBy: sum
+		sourceColumn: Val.adq.acum.
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'AmoN acum.'
+		dataType: double
+		lineageTag: 7212b00e-8b17-4e5b-ada4-002b40a37ccf
+		summarizeBy: sum
+		sourceColumn: AmoN acum.
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'AmoN planif.'
+		dataType: double
+		lineageTag: e5219183-3446-48b7-b8a8-2caf39409771
+		summarizeBy: sum
+		sourceColumn: AmoN planif.
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Denom.Cl.act.fijo'
+		dataType: string
+		lineageTag: b829110c-daf5-4d3c-92e9-d2fea32311dd
+		summarizeBy: none
+		sourceColumn: Denom.Cl.act.fijo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Txt.núm.pral.AF'
+		dataType: string
+		lineageTag: ec1c138b-d260-4faa-bdc6-1e385beb1ab6
+		summarizeBy: none
+		sourceColumn: Txt.núm.pral.AF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cta.CAP'
+		dataType: string
+		lineageTag: 990eef75-a368-4b96-969e-105543f36104
+		summarizeBy: none
+		sourceColumn: Cta.CAP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AmoN contab.'
+		dataType: double
+		lineageTag: 38006f19-db6f-47c3-84f4-5f5154cb9331
+		summarizeBy: sum
+		sourceColumn: AmoN contab.
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Fe.capit.'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e4cdf8ce-6be9-40a1-9ed1-8a700d75f18b
+		summarizeBy: none
+		sourceColumn: Fe.capit.
+
+		variation Variación
+			isDefault
+			relationship: bc063b92-0503-46ec-93fa-5eddf4ed01ac
+			defaultHierarchy: LocalDateTable_de06340b-ffa7-45c6-9bb9-a6d40b90991f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition VALACT01_SQVI = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\Taligent\OneDrive\Escritorio\Nicolás\Taligent\Trenes Argentinos\AyL\VALACT01_SQVI 19-06-2025\VALACT01_SQVI.CSV"),[Delimiter="	", Columns=22, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				        #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Encabezados promovidos",{"Activo fijo", "Val.adq.acum.", "AmoN acum.", "AmoN planif.", "AmoN contab.", "Denom.Cl.act.fijo", "Txt.núm.pral.AF", "Cta.CAP", "Fe.capit."}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Otras columnas quitadas",{{"Val.adq.acum.", type number}, {"AmoN acum.", type number}, {"AmoN planif.", type number}, {"Fe.capit.", type date}, {"AmoN contab.", type number}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

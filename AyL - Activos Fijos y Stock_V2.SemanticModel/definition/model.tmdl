@@ -1,0 +1,30 @@
+model Model
+	culture: es-AR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["dim_materiales","centros y almacenes","ctas cbles","centros","almacenes","Tabla Medidas Mod 2","dim_lineas","dim_lineas (2)","VALACT01_SQVI","Tabla_Desc_KPI"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.144.1155.0 (25.06)+46435b07013d2a234d7fd007083a9e70b8e79f1c
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode"]
+
+ref table dim_materiales
+ref table 'centros y almacenes'
+ref table 'ctas cbles'
+ref table centros
+ref table almacenes
+ref table 'Tabla Medidas Mod 2'
+ref table dim_lineas
+ref table VALACT01_SQVI
+ref table DateTableTemplate_c42b2e8b-ad25-409e-bfb4-88ea20b7543d
+ref table LocalDateTable_de06340b-ffa7-45c6-9bb9-a6d40b90991f
+ref table Tabla_Desc_KPI
+
+ref cultureInfo es-AR
+

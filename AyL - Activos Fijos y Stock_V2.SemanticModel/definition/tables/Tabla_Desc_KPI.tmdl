@@ -1,0 +1,34 @@
+table Tabla_Desc_KPI
+	lineageTag: 78dc8807-a00d-4c99-b805-d9cac1bd54e1
+
+	column 'Nombre KPI'
+		dataType: string
+		lineageTag: daf7700d-e889-43a2-b216-0303c6dbd91f
+		summarizeBy: none
+		sourceColumn: Nombre KPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion KPI'
+		dataType: string
+		lineageTag: f8b007f9-c871-4ab2-b64b-dcf029ab0b85
+		summarizeBy: none
+		sourceColumn: Descripcion KPI
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tabla_Desc_KPI = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Taligent\OneDrive\Escritorio\Nicolás\Taligent\Trenes Argentinos\AyL\Pruebas\Descripciones KPIs.xlsx"), null, true),
+				    #"Mejor todavía, yo ya tengo un t_Sheet" = Origen{[Item="Mejor todavía, yo ya tengo un t",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(#"Mejor todavía, yo ya tengo un t_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Nombre KPI", type text}, {"Descripcion KPI", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

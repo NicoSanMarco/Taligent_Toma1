@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/2.1.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": "5.64",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Tema_RRHH_ColoresNuevos_WF_Fon06372285575054581.json",
+      "reportVersionAtImport": "5.64",
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "htmlContent443BE3AD55E043BF878BED274D3A6855"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Tema_RRHH_ColoresNuevos_WF_Fon06372285575054581.json",
+          "path": "Tema_RRHH_ColoresNuevos_WF_Fon06372285575054581.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "Dash_AyL_-_Stock_-_Detalles7880765482487078.png",
+          "path": "Dash_AyL_-_Stock_-_Detalles7880765482487078.png",
+          "type": "Image"
+        },
+        {
+          "name": "Dash_AyL_-_Stock_-_Detalles05949479437767635.png",
+          "path": "Dash_AyL_-_Stock_-_Detalles05949479437767635.png",
+          "type": "Image"
+        },
+        {
+          "name": "Dash_AyL_-_Stock39730850630354153.png",
+          "path": "Dash_AyL_-_Stock39730850630354153.png",
+          "type": "Image"
+        },
+        {
+          "name": "filtrar8662458319384025.png",
+          "path": "filtrar8662458319384025.png",
+          "type": "Image"
+        },
+        {
+          "name": "borrar_filtros7785255218119758.png",
+          "path": "borrar_filtros7785255218119758.png",
+          "type": "Image"
+        },
+        {
+          "name": "Dash_AyL_-_Activos_Fijos6283634153406292.png",
+          "path": "Dash_AyL_-_Activos_Fijos6283634153406292.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

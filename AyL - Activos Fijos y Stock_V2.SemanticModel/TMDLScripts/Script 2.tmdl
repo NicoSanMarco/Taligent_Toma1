@@ -1,0 +1,68 @@
+createOrReplace
+
+    table Tabla_Medidas
+        lineageTag: d8e1e888-f4f2-4b4e-8d75-123456789000
+
+        measure 'Total Materiales' = DISTINCTCOUNT('centros y almacenes'[Material])
+            formatString: #,0
+            lineageTag: 00000001-aaaa-bbbb-cccc-000000000001
+
+        measure 'Total Centros' = DISTINCTCOUNT('centros y almacenes'[Ce.])
+            formatString: #,0
+            lineageTag: 00000002-aaaa-bbbb-cccc-000000000002
+
+        measure 'Total Almacenes' = DISTINCTCOUNT('centros y almacenes'[Alm.])
+            formatString: #,0
+            lineageTag: 00000003-aaaa-bbbb-cccc-000000000003
+
+        measure 'Suma Stock Libre' = SUM('centros y almacenes'[Libre utiliz.])
+            formatString: #,0
+            lineageTag: 00000004-aaaa-bbbb-cccc-000000000004
+
+        measure 'Suma Stock Transferencia' = SUM('centros y almacenes'[En traslado])
+            formatString: #,0
+            lineageTag: 00000005-aaaa-bbbb-cccc-000000000005
+
+        measure 'Suma Stock Inspección' = SUM('centros y almacenes'[En insp.calid.])
+            formatString: #,0
+            lineageTag: 00000006-aaaa-bbbb-cccc-000000000006
+
+        measure 'Suma Stock no Libre' = SUM('centros y almacenes'[No libre])
+            formatString: #,0
+            lineageTag: 00000007-aaaa-bbbb-cccc-000000000007
+
+        measure 'Suma Stock Bloqueado' = SUM('centros y almacenes'[Bloqueado])
+            formatString: #,0
+            lineageTag: 00000008-aaaa-bbbb-cccc-000000000008
+
+        measure 'Suma Devoluciones' = SUM('centros y almacenes'[Devoluciones])
+            formatString: #,0
+            lineageTag: 00000009-aaaa-bbbb-cccc-000000000009
+
+        measure 'Suma Stock Total' = SUM('centros y almacenes'[Stock total])
+            formatString: #,0
+            lineageTag: 0000000A-aaaa-bbbb-cccc-00000000000A
+
+        measure '% Stock Libre' = DIVIDE([Suma Stock Libre], [Suma Stock Total])
+            formatString: 0.00\ %;-0.00\ %;0.00\ %
+            lineageTag: 0000000B-aaaa-bbbb-cccc-00000000000B
+
+        measure '% Stock Transferencia' = DIVIDE([Suma Stock Transferencia], [Suma Stock Total])
+            formatString: 0.00\ %;-0.00\ %;0.00\ %
+            lineageTag: 0000000C-aaaa-bbbb-cccc-00000000000C
+
+        measure '% Stock Inspección' = DIVIDE([Suma Stock Inspección], [Suma Stock Total])
+            formatString: 0.00\ %;-0.00\ %;0.00\ %
+            lineageTag: 0000000D-aaaa-bbbb-cccc-00000000000D
+
+        measure '% Stock no Libre' = DIVIDE([Suma Stock no Libre], [Suma Stock Total])
+            formatString: 0.00\ %;-0.00\ %;0.00\ %
+            lineageTag: 0000000E-aaaa-bbbb-cccc-00000000000E
+
+        measure '% Stock Bloqueado' = DIVIDE([Suma Stock Bloqueado], [Suma Stock Total])
+            formatString: 0.00\ %;-0.00\ %;0.00\ %
+            lineageTag: 0000000F-aaaa-bbbb-cccc-00000000000F
+
+        measure '% Devoluciones' = DIVIDE([Suma Devoluciones], [Suma Stock Total])
+            formatString: 0.00\ %;-0.00\ %;0.00\ %
+            lineageTag: 00000010-aaaa-bbbb-cccc-000000000010

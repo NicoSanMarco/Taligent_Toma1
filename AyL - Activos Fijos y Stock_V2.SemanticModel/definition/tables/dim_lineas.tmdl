@@ -1,0 +1,48 @@
+table dim_lineas
+	lineageTag: ac50e1c8-cdca-46d4-9399-80fa566d0d47
+
+	column 'Ce.'
+		dataType: string
+		lineageTag: 52b3c1ae-e187-4533-9296-6d886099d5b3
+		summarizeBy: none
+		sourceColumn: Ce.
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_linea
+		dataType: string
+		lineageTag: f77cffbf-9433-4387-8172-5100253cd129
+		summarizeBy: none
+		sourceColumn: cod_linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Línea
+		dataType: string
+		lineageTag: 626a0cd5-b2eb-4329-b7e9-15cfafbff689
+		summarizeBy: none
+		sourceColumn: Línea
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_lineas = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\Taligent\OneDrive\Escritorio\Nicolás\Taligent\Trenes Argentinos\AyL\Luis - BBDD 13-06-2025\centros y almacenes.csv"),[Delimiter="	", Columns=24, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Libre utiliz.", Int64.Type}, {"En traslado", Int64.Type}, {"En insp.calid.", Int64.Type}, {"No libre", Int64.Type}, {"Bloqueado", Int64.Type}, {"Devoluciones", Int64.Type}, {"PrMedioVar", Currency.Type}, {"Stock total", Int64.Type}}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado",{"Ce."}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
+				    #"Primeros caracteres insertados" = Table.AddColumn(#"Duplicados quitados", "Primeros caracteres", each Text.Start([#"Ce."], 2), type text),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Primeros caracteres insertados",{{"Primeros caracteres", "cod_linea"}}),
+				    #"Consultas combinadas" = Table.NestedJoin(#"Columnas con nombre cambiado", {"cod_linea"}, #"dim_lineas (2)", {"cod_linea"}, "dim_lineas (2)", JoinKind.LeftOuter),
+				    #"Se expandió dim_lineas (2)" = Table.ExpandTableColumn(#"Consultas combinadas", "dim_lineas (2)", {"Personalizado"}, {"Personalizado"}),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Se expandió dim_lineas (2)",{{"Personalizado", "Línea"}})
+				in
+				    #"Columnas con nombre cambiado1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

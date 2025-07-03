@@ -1,0 +1,642 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Sin Forma Fondo",
+  "name": "d4446bf74423edb210a0",
+  "options": {
+    "targetVisualNames": [],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "e1f06af7d08ac99866f7",
+    "sections": {
+      "e1f06af7d08ac99866f7": {
+        "visualContainers": {
+          "13966198af4db0c89e0f": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8c0191bf75e1619015c6",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "v",
+                        "Entity": "VALACT01_SQVI",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "v"
+                                        }
+                                      },
+                                      "Property": "Denom.Cl.act.fijo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "''"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Denom.Cl.act.fijo"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "da425bc245d449b7aedb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Valor_Acum."
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9b4d15e7b18a03c7ae36",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Valor_Amort."
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cfdea6fc07b0e62c07cb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Txt.núm.pral.AF"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aa07763297d95a456a22",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Neto Contable (Sin Activos en Curso)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "60cc7b576020d16703c3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tasa Amortizacion Acumulada -sin AF-"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Denom.Cl.act.fijo"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Denom.Cl.act.fijo"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Txt.núm.pral.AF"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Rows"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "VALACT01_SQVI.Denom.Cl.act.fijo"
+                      ],
+                      "isCollapsed": true,
+                      "identityKeys": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "VALACT01_SQVI"
+                              }
+                            },
+                            "Property": "Denom.Cl.act.fijo"
+                          }
+                        }
+                      ],
+                      "isPinned": true
+                    },
+                    {
+                      "queryRefs": [
+                        "VALACT01_SQVI.Txt.núm.pral.AF"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null,
+                    "children": [
+                      {
+                        "identityValues": [
+                          {
+                            "Literal": {
+                              "Value": "'Marcas y Patentes'"
+                            }
+                          }
+                        ],
+                        "isToggled": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "80a23f2f1b0c66e95707": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7aed6ec60cbd2b39d486": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "16e91986eb3e41d609b7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "KPI Animado Activos 100% Acumulados"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Cantidad Activos Fijos 100% Amortizados"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "5af310c8370eaeab19ba": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "39e6d3b01966db5a0b0d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "KPI Animado % Amort. Acum."
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tasa Amortizacion Acumulada -sin AF-"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "73141e1e94e289644272": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8c0191bf75e1619015c6",
+                  "type": "TopN",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Denom.Cl.act.fijo"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6395c822b44758d0cd82",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Activos"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Activos"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Denom.Cl.act.fijo"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eb96e67d93a3e61b30a6": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "a61c3fd43890d6294ccc": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "cd1e9845a139a89541b9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "KPI Animado - Tot_Valor_Acum."
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+              "objects": {}
+            }
+          },
+          "ffbf282cd01b0d9b0a03": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b046407ed004102ac004",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "KPI Animado Tot_Valor_Amort."
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+              "objects": {}
+            }
+          },
+          "4822276c70b03c47700b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9bdd3af2ee865e298aba",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "KPI Animado Valor Neto Contable"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+              "objects": {}
+            }
+          },
+          "275aca2b6c39e45dd276": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "cfe66c1425dd243034c3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "KPI Animado Tot Activos"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+              "objects": {}
+            }
+          },
+          "c1c81dedd5256109740d": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "fe1cc11dc8236e72c09d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "2a31cc2f5a43edb7d438": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "16fb1ca06aa6703734ee": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "8c640b79e6bdc7bee079": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "c1cb12260778943c1d55": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "afd7fd3c020064ba10b3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Denom.Cl.act.fijo"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "29aea81a32e523dc0e0d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "7f0abc7500086e2ce339": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f527ed88a525ed8bd22a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Txt.núm.pral.AF"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "b011837f62023e565022": {
+            "children": {
+              "ebd915a33c8ab6a6b071": {
+                "isHidden": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

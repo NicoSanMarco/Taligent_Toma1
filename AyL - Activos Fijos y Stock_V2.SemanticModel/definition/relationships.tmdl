@@ -1,0 +1,29 @@
+relationship AutoDetected_1de34493-d449-4a33-ad9e-ca0fcb8ddb63
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'centros y almacenes'.'Ce.'
+	toColumn: centros.'Ce.'
+
+relationship AutoDetected_bb6d520b-5f1f-460d-98cd-38c2c744688e
+	fromColumn: 'centros y almacenes'.'Alm.'
+	toColumn: almacenes.'Alm.'
+
+relationship f70c890a-c880-b52c-8084-6ec6f1a8072b
+	fromColumn: 'centros y almacenes'.'Cta.mayor'
+	toColumn: 'ctas cbles'.SAKNR
+
+relationship AutoDetected_b59e0428-202b-4226-82dc-b3f15f15bb8e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_lineas.'Ce.'
+	toColumn: centros.'Ce.'
+
+relationship bc063b92-0503-46ec-93fa-5eddf4ed01ac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VALACT01_SQVI.'Fe.capit.'
+	toColumn: LocalDateTable_de06340b-ffa7-45c6-9bb9-a6d40b90991f.Date
+
+relationship b1c2e53c-c682-5dfc-d1d3-71d90995a636
+	crossFilteringBehavior: bothDirections
+	fromColumn: VALACT01_SQVI.'Cta.CAP'
+	toColumn: 'ctas cbles'.SAKNR
+

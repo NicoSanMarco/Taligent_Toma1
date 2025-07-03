@@ -1,0 +1,4774 @@
+cultureInfo es-AR
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_materiale": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_materiales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "dim materiale": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_materiales": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_materiale.codigo_material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_materiales",
+			          "ConceptualProperty": "CodigoMaterial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "codigo material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CodigoMaterial": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "codigo fabric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "codigo cloth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "codigo textile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "dim_materiale.descripcion_material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_materiales",
+			          "ConceptualProperty": "DescripcionMaterial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "descripcion material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DescripcionMaterial": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "descripcion fabric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "descripcion cloth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "descripcion textile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "centros y almacene": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "centro y almacene": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Material"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "physical": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "substantial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "solid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "substantive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.descripción_del_material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Descripción del material"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descripción del material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "descripción del fabric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "descripción del cloth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "descripción del textile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.ce_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Ce."
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ce.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.alm_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Alm."
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "alm.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.libre_utiliz_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Libre utiliz."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "libre utiliz.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.en_traslado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "En traslado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "en traslado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.en_insp_calid_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "En insp.calid."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "en insp.calid.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.no_libre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "No libre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "no libre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "number libre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.bloqueado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Bloqueado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bloqueado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.devolucione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Devoluciones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "devolucione": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.pr_medio_var": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "PrMedioVar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pr medio var": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PrMedioVar": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.cta_mayor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Cta.mayor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cta.mayor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centros_y_almacene.stock_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros y almacenes",
+			          "ConceptualProperty": "Stock total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "stock total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "stock aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "stock overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "inventory total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "ctas_cble": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ctas cbles"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ctas cble": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cta cble": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "ctas_cble.saknr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ctas cbles",
+			          "ConceptualProperty": "SAKNR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saknr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "ctas_cble.txt_20": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ctas cbles",
+			          "ConceptualProperty": "TXT20"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "txt 20": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TXT20": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Categoría de Material": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ctas_cble.txt_50": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ctas cbles",
+			          "ConceptualProperty": "TXT50"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "txt 50": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TXT50": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "centro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "centro": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "centro.ce_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "centros",
+			          "ConceptualProperty": "Ce."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ce.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "almacene": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "almacenes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "almacene": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "almacene.alm_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "almacenes",
+			          "ConceptualProperty": "Alm."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "alm.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tabla medidas mod 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tabla medida mod 2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tot_centros": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Centros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot centros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tot_Centros": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tot_almacenes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Almacenes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot almacenes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tot_Almacenes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.stock_total_unico_por_material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Stock Total Unico por Material"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "stock total unico por material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "inventory total unico por material": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "stock aggregate unico por material": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "stock overall unico por material": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "stock total unico por fabric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.469
+			          }
+			        },
+			        {
+			          "stock total unico por cloth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.469
+			          }
+			        },
+			        {
+			          "stock total unico por textile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.469
+			          }
+			        },
+			        {
+			          "stock total unico por stuff": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.455
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_libre_utiliz_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor Libre Utiliz."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor libre utiliz.": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Libre Utiliz.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_en_traslado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor En Traslado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor en traslado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "En Traslado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_en_insp__calid_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor En Insp. Calid."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor en insp. calid.": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "En Insp. Calid.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_no_libre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor No Libre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor no libre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor number libre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "No Libre": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_bloqueado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor Bloqueado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor bloqueado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Bloqueado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_devoluciones": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor Devoluciones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor devoluciones": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_libre__bloqueado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor Libre - Bloqueado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor libre - bloqueado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor libre bloqueado": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "dim_linea": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_lineas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim linea": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_lineas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "linea": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "dim_linea.ce_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_lineas",
+			          "ConceptualProperty": "Ce."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ce.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_linea.cod_linea": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_lineas",
+			          "ConceptualProperty": "cod_linea"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cod linea": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cod_linea": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "linea": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_neto_contable": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor Neto Contable"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor neto contable": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tasa_amortizacion_acumulada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tasa Amortizacion Acumulada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tasa amortizacion acumulada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% Amort. Acum.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.pct_amort_planif_sobre_VNC": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Pct Amort Planif sobre VNC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pct amort planif sobre VNC": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.vida_util_restante_años": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Vida Util Restante (Años)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vida util restante (años)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vida util restante": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.estado_de_antiguedad_opción_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Estado de Antiguedad (Opción 2)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado de antiguedad (opción 2)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estado de antiguedad": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_adq__acum__formateado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor Adq. Acum. Formateado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor adq. acum. formateado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.Tot_Valor_Acum_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Valor_Acum."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tot_Valor_Acum.": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Acum.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.Tot_Valor_Amort_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Valor_Amort."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tot_Valor_Amort.": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Amort.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.neto_contable": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Neto Contable"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "neto contable": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.Tot_Valor_Plan_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Valor_Plan."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tot_Valor_Plan.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tot_activos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Activos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot activos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tot_Activos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_linea.línea": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_lineas",
+			          "ConceptualProperty": "Línea"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "línea": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.Tot_Mat_Libre_Util_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Mat_Libre_Util."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tot_Mat_Libre_Util.": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Libre Utiliz.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tot_mat_en_traslado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Mat_En_Traslado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot mat en traslado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tot_Mat_En_Traslado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "En Traslado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.Tot_Mat_En_Insp_Calid_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Mat_En_Insp_Calid."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tot_Mat_En_Insp_Calid.": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "En Insp Calid.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tot_mat_no_libre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Mat_No_Libre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot mat no libre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tot_Mat_No_Libre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tot mat number libre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "No Libre": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tot_mat_bloqueado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Mat_Bloqueado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot mat bloqueado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tot_Mat_Bloqueado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Bloqueado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tot_mat_devoluciones": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Mat_Devoluciones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot mat devoluciones": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tot_Mat_Devoluciones": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tot_productos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tot_Productos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot productos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tot_Productos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.productos_amortizados_al_100": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Productos Amortizados al 100%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "productos amortizados al 100%": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "producto amortizado al 100 percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "producto amortizado al 100 pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.porcentaje_activos_amortizados_al_100": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Porcentaje Activos Amortizados al 100%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "porcentaje activos amortizados al 100%": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.cantidad_activos_fijos_100_amortizados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Cantidad Activos Fijos 100% Amortizados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cantidad activos fijos 100% amortizados": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.porcentaje_activos_fijos_100_amortizados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Porcentaje Activos Fijos 100% Amortizados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "porcentaje activos fijos 100% amortizados": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.valor_neto_contable_sin_activos_en_curso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Valor Neto Contable (Sin Activos en Curso)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor neto contable (sin activos en curso)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor neto contable": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Neto Contable": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2.tasa_amortizacion_acumulada_sin_AF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas Mod 2",
+			          "ConceptualProperty": "Tasa Amortizacion Acumulada -sin AF-"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tasa amortizacion acumulada -sin AF-": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tasa amortizacion acumulada sin AF": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "% Amort. Acum.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valact 01 sqvi": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VALACT01_SQVI": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.activo_fijo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "Activo fijo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "activo fijo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.Val_adq_acum_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "Val.adq.acum."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Val.adq.acum.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.AmoN_acum_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "AmoN acum."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AmoN acum.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.AmoN_planif_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "AmoN planif."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AmoN planif.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.Denom_Cl_act_fijo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "Denom.Cl.act.fijo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Denom.Cl.act.fijo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Categoría de Activo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.txt_núm_pral_AF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "Txt.núm.pral.AF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "txt núm pral AF": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Txt.núm.pral.AF": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.cta_CAP": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "Cta.CAP"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cta CAP": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Cta.CAP": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "CAP": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cta lid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cta cover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cta top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cta stopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cta plug": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "lid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "plug": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cta restraint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.AmoN_contab_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "AmoN contab."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AmoN contab.": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.fe_capit_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "Fe.capit."
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fe.capit.": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "valact_01_sqvi.fe_capit_.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "VariationSource": "Fe.capit.",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.fe_capit_.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "VariationSource": "Fe.capit.",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fe.capit. año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.fe_capit_.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "VariationSource": "Fe.capit.",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fe.capit. trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.fe_capit_.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "VariationSource": "Fe.capit.",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fe.capit. me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.fe_capit_.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "VariationSource": "Fe.capit.",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fe.capit. día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi.neto_contable_nuevo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "VALACT01_SQVI",
+			          "ConceptualProperty": "Neto Contable Nuevo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "neto contable nuevo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "valact_01_sqvi_fe_capit__trimestre_has_valact_01_sqvi_fe_capit__me": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi.fe_capit_.trimestre": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.trimestre"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_.me": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.trimestre"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.me"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_fe_capit__año_has_valact_01_sqvi_fe_capit__trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi.fe_capit_.año": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.año"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_.trimestre": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.año"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.trimestre"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_fe_capit__jerarquía_de_fecha_has_valact_01_sqvi_fe_capit__día": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi.fe_capit_.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_.día": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_fe_capit__jerarquía_de_fecha_has_valact_01_sqvi_fe_capit__me": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi.fe_capit_.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_.me": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_fe_capit__jerarquía_de_fecha_has_valact_01_sqvi_fe_capit__trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi.fe_capit_.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_.trimestre": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_fe_capit__jerarquía_de_fecha_has_valact_01_sqvi_fe_capit__año": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi.fe_capit_.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_.año": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_fe_capit__has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi.fe_capit_": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fe_capit__have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_ctas_cble": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "ctas_cble": {
+			          "Target": {
+			            "Entity": "ctas_cble"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "ctas_cble"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_ctas_cbles"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ctas_cble"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ctas_cbles_have_valact_01_sqvis"
+			        }
+			      ]
+			    },
+			    "dim_linea_has_centro": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_lineas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_linea": {
+			          "Target": {
+			            "Entity": "dim_linea"
+			          }
+			        },
+			        "centro": {
+			          "Target": {
+			            "Entity": "centro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_linea"
+			            },
+			            "Object": {
+			              "Role": "centro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_linea_have_centro"
+			        }
+			      ]
+			    },
+			    "centro_has_dim_linea": {
+			      "Binding": {
+			        "ConceptualEntity": "centros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centro": {
+			          "Target": {
+			            "Entity": "centro"
+			          }
+			        },
+			        "dim_linea": {
+			          "Target": {
+			            "Entity": "dim_linea"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centro"
+			            },
+			            "Object": {
+			              "Role": "dim_linea"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centro_have_dim_linea"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_ctas_cble": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "ctas_cble": {
+			          "Target": {
+			            "Entity": "ctas_cble"
+			          },
+			          "Nouns": [
+			            {
+			              "cta.mayor": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "ctas_cble"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_ctas_cbles"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ctas_cble"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ctas_cbles_have_centros_y_almacenes"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_almacene": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "almacene": {
+			          "Target": {
+			            "Entity": "almacene"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "almacene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_almacenes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "almacenes_have_centros_y_almacenes"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_centro": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centro": {
+			          "Target": {
+			            "Entity": "centro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_centro"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centro"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centro_have_centros_y_almacenes"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_neto_contable_nuevo": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.neto_contable_nuevo": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.neto_contable_nuevo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.neto_contable_nuevo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_neto_contable_nuevo"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_fe_capit_": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_fe_capit_"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_AmoN_contab_": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.AmoN_contab_": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.AmoN_contab_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.AmoN_contab_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_AmoN_contab_"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_txt_núm_pral_AF": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.txt_núm_pral_AF": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.txt_núm_pral_AF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.txt_núm_pral_AF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_txt_núm_pral_AF"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_Denom_Cl_act_fijo": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.Denom_Cl_act_fijo": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.Denom_Cl_act_fijo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.Denom_Cl_act_fijo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_Denom_Cl_act_fijos"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_AmoN_planif_": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.AmoN_planif_": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.AmoN_planif_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.AmoN_planif_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_AmoN_planif_"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_AmoN_acum_": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.AmoN_acum_": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.AmoN_acum_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.AmoN_acum_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_AmoN_acum_"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_Val_adq_acum_": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.Val_adq_acum_": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.Val_adq_acum_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.Val_adq_acum_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_Val_adq_acum_"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_activo_fijo": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "valact_01_sqvi.activo_fijo": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.activo_fijo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.activo_fijo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_activo_fijos"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_tasa_amortizacion_acumulada_sin_AF": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tasa_amortizacion_acumulada_sin_AF": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tasa_amortizacion_acumulada_sin_AF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tasa_amortizacion_acumulada_sin_AF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_tasa_amortizacion_acumulada_sin_AF"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_valor_neto_contable_sin_activos_en_curso": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_neto_contable_sin_activos_en_curso": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_neto_contable_sin_activos_en_curso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_neto_contable_sin_activos_en_curso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_valor_neto_contable_sin_activos_en_curso"
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2_has_porcentaje_activos_fijos_100_amortizados": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Medidas Mod 2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_medidas_mod_2": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2"
+			          }
+			        },
+			        "tabla_medidas_mod_2.porcentaje_activos_fijos_100_amortizados": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.porcentaje_activos_fijos_100_amortizados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_medidas_mod_2"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.porcentaje_activos_fijos_100_amortizados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_medidas_mod_2_have_porcentaje_activos_fijos_100_amortizados"
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2_has_cantidad_activos_fijos_100_amortizados": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Medidas Mod 2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_medidas_mod_2": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2"
+			          }
+			        },
+			        "tabla_medidas_mod_2.cantidad_activos_fijos_100_amortizados": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.cantidad_activos_fijos_100_amortizados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_medidas_mod_2"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.cantidad_activos_fijos_100_amortizados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_medidas_mod_2_have_cantidad_activos_fijos_100_amortizados"
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2_has_porcentaje_activos_amortizados_al_100": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Medidas Mod 2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_medidas_mod_2": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2"
+			          }
+			        },
+			        "tabla_medidas_mod_2.porcentaje_activos_amortizados_al_100": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.porcentaje_activos_amortizados_al_100"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_medidas_mod_2"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.porcentaje_activos_amortizados_al_100"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_medidas_mod_2_have_porcentaje_activos_amortizados_al_100"
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2_has_productos_amortizados_al_100": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Medidas Mod 2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_medidas_mod_2": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2"
+			          }
+			        },
+			        "tabla_medidas_mod_2.productos_amortizados_al_100": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.productos_amortizados_al_100"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_medidas_mod_2"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.productos_amortizados_al_100"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_medidas_mod_2_have_productos_amortizados_al_100"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_tot_productos": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tot_productos": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tot_productos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tot_productos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_tot_productos"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_tot_mat_devoluciones": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tot_mat_devoluciones": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tot_mat_devoluciones"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tot_mat_devoluciones"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_tot_mat_devoluciones"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_tot_mat_bloqueado": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tot_mat_bloqueado": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tot_mat_bloqueado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tot_mat_bloqueado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_tot_mat_bloqueado"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_tot_mat_no_libre": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tot_mat_no_libre": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tot_mat_no_libre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tot_mat_no_libre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_tot_mat_no_libre"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_Tot_Mat_En_Insp_Calid_": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.Tot_Mat_En_Insp_Calid_": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.Tot_Mat_En_Insp_Calid_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.Tot_Mat_En_Insp_Calid_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_Tot_Mat_En_Insp_Calid_"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_tot_mat_en_traslado": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tot_mat_en_traslado": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tot_mat_en_traslado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tot_mat_en_traslado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_tot_mat_en_traslado"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_Tot_Mat_Libre_Util_": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.Tot_Mat_Libre_Util_": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.Tot_Mat_Libre_Util_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.Tot_Mat_Libre_Util_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_Tot_Mat_Libre_Util_"
+			        }
+			      ]
+			    },
+			    "dim_linea_has_línea": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_lineas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_linea": {
+			          "Target": {
+			            "Entity": "dim_linea"
+			          }
+			        },
+			        "dim_linea.línea": {
+			          "Target": {
+			            "Entity": "dim_linea.línea"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_linea"
+			            },
+			            "Object": {
+			              "Role": "dim_linea.línea"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_linea_have_líneas"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_tot_activos": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tot_activos": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tot_activos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tot_activos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_tot_activos"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_Tot_Valor_Plan_": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.Tot_Valor_Plan_": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.Tot_Valor_Plan_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.Tot_Valor_Plan_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_Tot_Valor_Plan_"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_neto_contable": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.neto_contable": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.neto_contable"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.neto_contable"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_neto_contable"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_Tot_Valor_Amort_": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.Tot_Valor_Amort_": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.Tot_Valor_Amort_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.Tot_Valor_Amort_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_Tot_Valor_Amort_"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_Tot_Valor_Acum_": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.Tot_Valor_Acum_": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.Tot_Valor_Acum_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.Tot_Valor_Acum_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_Tot_Valor_Acum_"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_valor_adq__acum__formateado": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_adq__acum__formateado": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_adq__acum__formateado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_adq__acum__formateado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_valor_adq__acum__formateado"
+			        }
+			      ]
+			    },
+			    "tabla_medidas_mod_2_has_estado_de_antiguedad_opción_2": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Medidas Mod 2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_medidas_mod_2": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2"
+			          }
+			        },
+			        "tabla_medidas_mod_2.estado_de_antiguedad_opción_2": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.estado_de_antiguedad_opción_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_medidas_mod_2"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.estado_de_antiguedad_opción_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_medidas_mod_2_have_estado_de_antiguedad_opción_2"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_vida_util_restante_años": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.vida_util_restante_años": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.vida_util_restante_años"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.vida_util_restante_años"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_vida_util_restante_años"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_pct_amort_planif_sobre_VNC": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.pct_amort_planif_sobre_VNC": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.pct_amort_planif_sobre_VNC"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.pct_amort_planif_sobre_VNC"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_pct_amort_planif_sobre_VNC"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_tasa_amortizacion_acumulada": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tasa_amortizacion_acumulada": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tasa_amortizacion_acumulada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tasa_amortizacion_acumulada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_tasa_amortizacion_acumulada"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_has_tabla_medidas_mod_2_valor_neto_contable": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_neto_contable": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_neto_contable"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_neto_contable"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valact_01_sqvis_have_valor_neto_contable"
+			        }
+			      ]
+			    },
+			    "dim_linea_has_cod_linea": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_lineas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_linea": {
+			          "Target": {
+			            "Entity": "dim_linea"
+			          }
+			        },
+			        "dim_linea.cod_linea": {
+			          "Target": {
+			            "Entity": "dim_linea.cod_linea"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_linea"
+			            },
+			            "Object": {
+			              "Role": "dim_linea.cod_linea"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_linea_have_cod_linea"
+			        }
+			      ]
+			    },
+			    "dim_linea_has_ce_": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_lineas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_linea": {
+			          "Target": {
+			            "Entity": "dim_linea"
+			          }
+			        },
+			        "dim_linea.ce_": {
+			          "Target": {
+			            "Entity": "dim_linea.ce_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_linea"
+			            },
+			            "Object": {
+			              "Role": "dim_linea.ce_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_linea_have_ce_"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_valor_libre__bloqueado": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_libre__bloqueado": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_libre__bloqueado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_libre__bloqueado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_valor_libre__bloqueado"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_valor_devoluciones": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_devoluciones": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_devoluciones"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_devoluciones"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_valor_devoluciones"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_valor_bloqueado": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_bloqueado": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_bloqueado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_bloqueado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_valor_bloqueado"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_valor_no_libre": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_no_libre": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_no_libre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_no_libre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_valor_no_libre"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_valor_en_insp__calid_": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_en_insp__calid_": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_en_insp__calid_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_en_insp__calid_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_valor_en_insp__calid_"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_valor_en_traslado": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_en_traslado": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_en_traslado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_en_traslado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_valor_en_traslado"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_valor_libre_utiliz_": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.valor_libre_utiliz_": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.valor_libre_utiliz_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.valor_libre_utiliz_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_valor_libre_utiliz_"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_stock_total_unico_por_material": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.stock_total_unico_por_material": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.stock_total_unico_por_material"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.stock_total_unico_por_material"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_stock_total_unico_por_material"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_tot_almacenes": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tot_almacenes": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tot_almacenes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tot_almacenes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_tot_almacenes"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_tabla_medidas_mod_2_tot_centros": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "tabla_medidas_mod_2.tot_centros": {
+			          "Target": {
+			            "Entity": "tabla_medidas_mod_2.tot_centros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "tabla_medidas_mod_2.tot_centros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_tot_centros"
+			        }
+			      ]
+			    },
+			    "almacene_has_alm_": {
+			      "Binding": {
+			        "ConceptualEntity": "almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "almacene": {
+			          "Target": {
+			            "Entity": "almacene"
+			          }
+			        },
+			        "almacene.alm_": {
+			          "Target": {
+			            "Entity": "almacene.alm_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "almacene"
+			            },
+			            "Object": {
+			              "Role": "almacene.alm_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "almacenes_have_alm_"
+			        }
+			      ]
+			    },
+			    "centro_has_ce_": {
+			      "Binding": {
+			        "ConceptualEntity": "centros"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centro": {
+			          "Target": {
+			            "Entity": "centro"
+			          }
+			        },
+			        "centro.ce_": {
+			          "Target": {
+			            "Entity": "centro.ce_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centro"
+			            },
+			            "Object": {
+			              "Role": "centro.ce_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centro_have_ce_"
+			        }
+			      ]
+			    },
+			    "ctas_cble_has_txt_50": {
+			      "Binding": {
+			        "ConceptualEntity": "ctas cbles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ctas_cble": {
+			          "Target": {
+			            "Entity": "ctas_cble"
+			          }
+			        },
+			        "ctas_cble.txt_50": {
+			          "Target": {
+			            "Entity": "ctas_cble.txt_50"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ctas_cble"
+			            },
+			            "Object": {
+			              "Role": "ctas_cble.txt_50"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ctas_cbles_have_txt_50"
+			        }
+			      ]
+			    },
+			    "ctas_cble_has_txt_20": {
+			      "Binding": {
+			        "ConceptualEntity": "ctas cbles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ctas_cble": {
+			          "Target": {
+			            "Entity": "ctas_cble"
+			          }
+			        },
+			        "ctas_cble.txt_20": {
+			          "Target": {
+			            "Entity": "ctas_cble.txt_20"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ctas_cble"
+			            },
+			            "Object": {
+			              "Role": "ctas_cble.txt_20"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ctas_cbles_have_txt_20"
+			        }
+			      ]
+			    },
+			    "ctas_cble_has_saknr": {
+			      "Binding": {
+			        "ConceptualEntity": "ctas cbles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ctas_cble": {
+			          "Target": {
+			            "Entity": "ctas_cble"
+			          }
+			        },
+			        "ctas_cble.saknr": {
+			          "Target": {
+			            "Entity": "ctas_cble.saknr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ctas_cble"
+			            },
+			            "Object": {
+			              "Role": "ctas_cble.saknr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ctas_cbles_have_saknrs"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_stock_total": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.stock_total": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.stock_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.stock_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_stock_totals"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_pr_medio_var": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.pr_medio_var": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.pr_medio_var"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.pr_medio_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_pr_medio_vars"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "centros_y_almacene.pr_medio_var"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pr_medio_var_indicates_how_expensive_centros_y_almacenes_are"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_devolucione": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.devolucione": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.devolucione"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.devolucione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_devoluciones"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_bloqueado": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.bloqueado": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.bloqueado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.bloqueado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_bloqueados"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_no_libre": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.no_libre": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.no_libre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.no_libre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_no_libres"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_en_insp_calid_": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.en_insp_calid_": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.en_insp_calid_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.en_insp_calid_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_en_insp_calid_"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_en_traslado": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.en_traslado": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.en_traslado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.en_traslado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_en_traslados"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_libre_utiliz_": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.libre_utiliz_": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.libre_utiliz_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.libre_utiliz_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_libre_utiliz_"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_descripción_del_material": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.descripción_del_material": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.descripción_del_material"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.descripción_del_material"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_descripción_del_materials"
+			        }
+			      ]
+			    },
+			    "centros_y_almacene_has_material": {
+			      "Binding": {
+			        "ConceptualEntity": "centros y almacenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "centros_y_almacene": {
+			          "Target": {
+			            "Entity": "centros_y_almacene"
+			          }
+			        },
+			        "centros_y_almacene.material": {
+			          "Target": {
+			            "Entity": "centros_y_almacene.material"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "centros_y_almacene"
+			            },
+			            "Object": {
+			              "Role": "centros_y_almacene.material"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "centros_y_almacenes_have_materials"
+			        }
+			      ]
+			    },
+			    "valact_01_sqvi_fe_capit__me_has_valact_01_sqvi_fe_capit__día": {
+			      "Binding": {
+			        "ConceptualEntity": "VALACT01_SQVI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "valact_01_sqvi.fe_capit_.me": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.me"
+			          }
+			        },
+			        "valact_01_sqvi.fe_capit_.día": {
+			          "Target": {
+			            "Entity": "valact_01_sqvi.fe_capit_.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.me"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.día"
+			            },
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "valact_01_sqvi.fe_capit_.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "valact_01_sqvi.fe_capit_.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

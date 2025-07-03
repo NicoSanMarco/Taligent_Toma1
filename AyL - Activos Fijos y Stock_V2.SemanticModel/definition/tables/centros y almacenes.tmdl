@@ -1,0 +1,132 @@
+table 'centros y almacenes'
+	lineageTag: ab761215-457c-4b7f-a818-baff0f153cc7
+
+	column Material
+		dataType: string
+		lineageTag: 6d20f812-442a-4d2c-ad51-ded360152737
+		summarizeBy: none
+		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripción del material'
+		dataType: string
+		lineageTag: 2e1a523f-64b1-4f5b-a22b-adcabfdcb7fe
+		summarizeBy: none
+		sourceColumn: Descripción del material
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ce.'
+		dataType: string
+		lineageTag: 0fee72f3-e588-45c9-93ea-af332a66fd57
+		summarizeBy: none
+		sourceColumn: Ce.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Alm.'
+		dataType: string
+		lineageTag: fc624daa-38b2-4590-b517-c7ab15240a29
+		summarizeBy: none
+		sourceColumn: Alm.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Libre utiliz.'
+		dataType: int64
+		formatString: 0
+		lineageTag: 82d7187b-e7b5-49b9-9a9e-27826e88368d
+		summarizeBy: sum
+		sourceColumn: Libre utiliz.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'En traslado'
+		dataType: int64
+		formatString: 0
+		lineageTag: 92b09dce-4650-4f5e-a082-4e51890459c3
+		summarizeBy: sum
+		sourceColumn: En traslado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'En insp.calid.'
+		dataType: int64
+		formatString: 0
+		lineageTag: 07ecabf1-9301-460b-b1db-d1cfe2668097
+		summarizeBy: sum
+		sourceColumn: En insp.calid.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'No libre'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b9c1934-c3cb-4397-a4c9-c28254f76add
+		summarizeBy: sum
+		sourceColumn: No libre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bloqueado
+		dataType: int64
+		formatString: 0
+		lineageTag: 30dc7e09-f8d1-40f2-928b-56e34ea42b5b
+		summarizeBy: sum
+		sourceColumn: Bloqueado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Devoluciones
+		dataType: int64
+		formatString: 0
+		lineageTag: f4233098-7810-44e6-a880-2f554158be3e
+		summarizeBy: sum
+		sourceColumn: Devoluciones
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrMedioVar
+		dataType: decimal
+		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+		lineageTag: 138a8579-f422-4c1e-9584-00fc2a7c5f4f
+		summarizeBy: sum
+		sourceColumn: PrMedioVar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	column 'Cta.mayor'
+		dataType: string
+		lineageTag: 096aed72-659e-4107-bafd-52840a97a277
+		summarizeBy: none
+		sourceColumn: Cta.mayor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stock total'
+		dataType: int64
+		formatString: 0
+		lineageTag: 700e0bac-cdfd-4002-ba23-8e663352e72e
+		summarizeBy: sum
+		sourceColumn: Stock total
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'centros y almacenes' = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\Taligent\OneDrive\Escritorio\Nicolás\Taligent\Trenes Argentinos\AyL\Luis - BBDD 13-06-2025\centros y almacenes.csv"),[Delimiter="	", Columns=24, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Libre utiliz.", Int64.Type}, {"En traslado", Int64.Type}, {"En insp.calid.", Int64.Type}, {"No libre", Int64.Type}, {"Bloqueado", Int64.Type}, {"Devoluciones", Int64.Type}, {"PrMedioVar", Currency.Type}, {"Stock total", Int64.Type}}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado",{"Material", "Descripción del material", "Ce.", "Alm.", "Libre utiliz.", "En traslado", "En insp.calid.", "No libre", "Bloqueado", "Devoluciones", "PrMedioVar", "Cta.mayor", "Stock total"})
+				in
+				    #"Otras columnas quitadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

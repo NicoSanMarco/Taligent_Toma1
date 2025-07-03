@@ -1,0 +1,1167 @@
+table 'Tabla Medidas Mod 2'
+	lineageTag: c263d55e-f679-4de5-8517-c9a378d062e0
+
+	measure Tot_Centros = DISTINCTCOUNT('centros y almacenes'[Ce.])
+		formatString: 0
+		displayFolder: 01. Totales
+		lineageTag: 3b8269e9-b402-4cf1-9303-df61f9f4af5e
+
+	measure Tot_Almacenes = DISTINCTCOUNT('centros y almacenes'[Alm.])
+		formatString: 0
+		displayFolder: 01. Totales
+		lineageTag: 88396cef-eb21-4e73-8c52-c486ffa55ca0
+
+	measure 'Stock Total Unico por Material' = ```
+			
+			SUMX(
+			    VALUES('centros y almacenes'[Material]),  
+			    CALCULATE(                                 
+			        MAX('centros y almacenes'[Stock total])  
+			                                                 
+			    )
+			)
+			```
+		formatString: #,0
+		displayFolder: 03. Stock
+		lineageTag: 0462d25e-6df3-4ada-9064-57133dea8833
+
+	measure 'Valor Libre Utiliz.' =
+			
+			SUMX(
+			    'centros y almacenes',
+			    'centros y almacenes'[Libre Utiliz.] * 'centros y almacenes'[PrMedioVar]
+			)
+		formatString: \$\ #,0;-\$\ #,0;\$\ #,0
+		displayFolder: 02. Valores
+		lineageTag: f23c332f-72a1-40d2-80f4-fb35e88fac01
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	measure 'Valor En Traslado' =
+			
+			SUMX(
+			    'centros y almacenes',
+			    'centros y almacenes'[En traslado] * 'centros y almacenes'[PrMedioVar]
+			)
+		formatString: \$\ #,0;-\$\ #,0;\$\ #,0
+		displayFolder: 02. Valores
+		lineageTag: b0a74d54-4b0f-43ed-abd1-362478c710c1
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	measure 'Valor En Insp. Calid.' =
+			
+			SUMX(
+			    'centros y almacenes',
+			    'centros y almacenes'[En insp.calid.] * 'centros y almacenes'[PrMedioVar]
+			)
+		formatString: \$\ #,0;-\$\ #,0;\$\ #,0
+		displayFolder: 02. Valores
+		lineageTag: 16ee391e-6275-4f72-86d6-73cf7f4e0309
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	measure 'Valor No Libre' =
+			
+			SUMX(
+			    'centros y almacenes',
+			    'centros y almacenes'[No libre] * 'centros y almacenes'[PrMedioVar]
+			)
+		formatString: \$\ #,0;-\$\ #,0;\$\ #,0
+		displayFolder: 02. Valores
+		lineageTag: 0c73bd1f-4530-4929-9534-694d5c63b6ae
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	measure 'Valor Bloqueado' =
+			
+			SUMX(
+			    'centros y almacenes',
+			    'centros y almacenes'[Bloqueado] * 'centros y almacenes'[PrMedioVar]
+			)
+		formatString: \$\ #,0;-\$\ #,0;\$\ #,0
+		displayFolder: 02. Valores
+		lineageTag: 07233b7f-c4fe-4856-8fe3-3f2019ea2f60
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	measure 'Valor Devoluciones' =
+			
+			SUMX(
+			    'centros y almacenes',
+			    'centros y almacenes'[Devoluciones] * 'centros y almacenes'[PrMedioVar]
+			)
+		formatString: \$\ #,0;-\$\ #,0;\$\ #,0
+		displayFolder: 02. Valores
+		lineageTag: 34ad2552-e295-4cab-9a85-ba7241ddf066
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	measure 'Valor Libre - Bloqueado' =
+			
+			[Valor Libre Utiliz.] - [Valor Bloqueado]
+		formatString: \$\ #,0;-\$\ #,0;\$\ #,0
+		displayFolder: 02. Valores
+		lineageTag: 237fdd59-6c59-4c42-9b33-68333cf56614
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	measure 'Valor Neto Contable' =
+			
+			CALCULATE(
+			    SUM (VALACT01_SQVI[Val.adq.acum.]) + SUM (VALACT01_SQVI[AmoN acum.]))
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: 01. Totales
+		lineageTag: a40163b9-4db3-48b9-9558-d88244fbfd90
+
+	measure 'Tasa Amortizacion Acumulada' =
+			
+			DIVIDE(
+			    -SUM('VALACT01_SQVI'[Amon acum.]), -- Uso el negativo para que el porcentaje sea positivo
+			    SUM('VALACT01_SQVI'[Val.adq.acum.]),
+			    BLANK()
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 01. Totales
+		lineageTag: c37b85f1-2372-4b41-a6a8-98b2f8febe41
+
+	measure 'Pct Amort Planif sobre VNC' =
+			
+			DIVIDE(
+			    -SUM('VALACT01_SQVI'[Amon planif.]), -- Usamos el negativo para que el porcentaje sea positivo
+			    [Valor Neto Contable],
+			    BLANK()
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: 01. Totales
+		lineageTag: cb8a1d19-dd4d-4389-9867-c4604fa78bc7
+
+	measure 'Vida Util Restante (Años)' =
+			
+			DIVIDE(
+			    [Valor Neto Contable],
+			    ABS(SUM('VALACT01_SQVI'[Amon planif.])), -- Usamos ABS por si la amortización planificada es negativa
+			    BLANK()
+			)
+		displayFolder: 01. Totales
+		lineageTag: b12d7458-2488-49b9-902c-c36ddbf76757
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Estado de Antiguedad (Opción 2)' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Tasa Amortizacion Acumulada] >= 0.75, "Dep. Avanzada (>75% Dpr.)",
+			    [Tasa Amortizacion Acumulada] >= 0.50, "Alta Dep. (50-75% Dpr.)",
+			    [Tasa Amortizacion Acumulada] >= 0.25, "Dep. Inicial (25-50% Dpr.)",
+			    [Tasa Amortizacion Acumulada] < 0.25, "Bajo Nivel de Dep. (<25% Dpr.)",
+			    BLANK()
+			)
+		displayFolder: 01. Totales
+		lineageTag: a4fa323e-fbda-4a4f-ab69-5f3e0d2315d9
+
+	measure 'Valor Adq. Acum. Formateado' =
+			
+			VAR _ValorNumericoOriginal = SUM('VALACT01_SQVI'[Val.adq.acum.]) -- Toma el valor original de la columna
+			VAR _ValorEnMillones = _ValorNumericoOriginal / 1000000             -- Divide por 1 millón
+			VAR _ValorRedondeado = ROUND(_ValorEnMillones, 0)                  -- Redondea al entero más cercano
+			RETURN
+			    FORMAT(_ValorRedondeado, "0") & " mil M"                       -- Formatea como texto y concatena " mil M"
+		displayFolder: 01. Totales
+		lineageTag: 6b0ecc7e-158b-42ec-89a6-a74245bb3165
+
+	measure 'Tot_Mat_Libre_Util.' =
+			
+			SUM('centros y almacenes'[Libre utiliz.])
+		formatString: #,0
+		displayFolder: 03. Stock
+		lineageTag: e3e5fc95-c489-441b-b9ea-bba2cbb44126
+
+	measure Tot_Mat_En_Traslado =
+			
+			SUM('centros y almacenes'[En traslado])
+		formatString: #,0
+		displayFolder: 03. Stock
+		lineageTag: 77862497-05e8-4242-a859-b837a163e245
+
+	measure 'Tot_Mat_En_Insp_Calid.' =
+			
+			SUM('centros y almacenes'[En insp.calid.])
+		formatString: #,0
+		displayFolder: 03. Stock
+		lineageTag: 267b5340-dbb7-4ace-b79d-6d9d260712b3
+
+	measure Tot_Mat_No_Libre =
+			
+			SUM('centros y almacenes'[No libre])
+		formatString: #,0
+		displayFolder: 03. Stock
+		lineageTag: 0a70a982-0388-41ca-9974-7dc02f5d3810
+
+	measure Tot_Mat_Bloqueado =
+			
+			SUM('centros y almacenes'[Bloqueado])
+		formatString: #,0
+		displayFolder: 03. Stock
+		lineageTag: bcd11b24-9e2e-4248-b6b9-81cf9b0e786c
+
+	measure Tot_Mat_Devoluciones =
+			
+			SUM('centros y almacenes'[Devoluciones])
+		formatString: #,0
+		displayFolder: 03. Stock
+		lineageTag: 6af8eb71-7219-4f9a-8427-fead822c0f19
+
+	measure 'Neto Contable' =
+			
+			SUM ( VALACT01_SQVI[AmoN planif.] )
+		formatString: #,0
+		displayFolder: 01. Totales
+		lineageTag: 3f2cb741-ae30-4ce3-a2e1-d6071587cf34
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure Tot_Activos =
+			
+			DISTINCTCOUNT(VALACT01_SQVI[Activo fijo])
+		formatString: #,0
+		displayFolder: 01. Totales
+		lineageTag: caa30454-d992-4f2d-8b38-61c9638bc8ef
+
+	measure 'Tot_Valor_Acum.' =
+			
+			SUM ( VALACT01_SQVI[Val.adq.acum.] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: 01. Totales
+		lineageTag: 6e454f3c-64b4-4497-9d17-963a2e5d7b7e
+
+	measure 'Tot_Valor_Amort.' =
+			
+			SUM ( VALACT01_SQVI[AmoN acum.] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: 01. Totales
+		lineageTag: 0bb8fd05-dba8-4cbf-a0b2-0053512767d9
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Tot_Valor_Plan.' =
+			
+			SUM ( VALACT01_SQVI[AmoN planif.] )
+		formatString: #,0
+		displayFolder: 01. Totales
+		lineageTag: 821fd54f-f852-4aab-87b4-de1db69bd9ad
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure Tot_Productos =
+			
+			DISTINCTCOUNT(VALACT01_SQVI[Denom.Cl.act.fijo])
+		formatString: 0
+		displayFolder: 01. Totales
+		lineageTag: 3765673e-3209-434a-a690-5c648abde238
+
+	measure 'Productos Amortizados al 100%' =
+			
+			COUNTROWS(
+			    FILTER(
+			        SUMMARIZE(
+			            'VALACT01_SQVI',
+			            'VALACT01_SQVI'[Txt.núm.pral.AF], -- Agrupamos por cada producto
+			            "TasaAmortizacionPorProducto",    -- Creamos una columna temporal con la tasa de cada producto
+			                DIVIDE(
+			                    -SUM('VALACT01_SQVI'[Amon acum.]),
+			                    SUM('VALACT01_SQVI'[Val.adq.acum.]),
+			                    BLANK()
+			                )
+			        ),
+			        [TasaAmortizacionPorProducto] >= 1    -- Filtramos para que la tasa sea 1 (100%) o más
+			    )
+			)
+		formatString: 0
+		displayFolder: 01. Totales
+		lineageTag: 23dbf130-1f92-4896-b0dc-e64e37d14afc
+
+	measure 'Porcentaje Activos Amortizados al 100%' =
+			
+			VAR _TotalProductosAmortizados100Pct = // Declara una variable para almacenar el conteo de productos 100% amortizados
+			    COUNTROWS( // Cuenta el número de filas de la tabla resultante del filtro
+			        FILTER( // Filtra una tabla virtual para incluir solo los productos con 100% de amortización
+			            SUMMARIZE( // Crea una tabla virtual que agrupa los datos y calcula la tasa de amortización por cada producto
+			                'VALACT01_SQVI', // Tabla base sobre la cual se realizará la agrupación y los cálculos
+			                'VALACT01_SQVI'[Txt.núm.pral.AF], // Columna para agrupar, cada valor único representa un producto (activo fijo)
+			                "TasaAmortizacionPorProducto",    // Nombre de la nueva columna en la tabla virtual que almacenará la tasa
+			                    DIVIDE( // Calcula la tasa de amortización de manera segura
+			                        -SUM('VALACT01_SQVI'[Amon acum.]), // Suma de la amortización acumulada (se usa negativo para obtener un valor positivo de la tasa)
+			                        SUM('VALACT01_SQVI'[Val.adq.acum.]), // Suma del valor de adquisición acumulado
+			                        BLANK() // Devuelve BLANK() si el denominador (Valor de Adquisición Acumulado) es cero
+			                    )
+			            ),
+			            [TasaAmortizacionPorProducto] >= 1    // Condición de filtro: mantiene solo los productos cuya tasa es 1 (100%) o mayor
+			        )
+			    )
+			VAR _TotalActivosFijos = // Declara una variable para almacenar el conteo total de activos fijos
+			    DISTINCTCOUNT(VALACT01_SQVI[Activo fijo]) // Cuenta el número de activos fijos únicos en la columna 'Activo fijo'
+			RETURN // Inicia la sección donde se define el resultado final de la medida
+			    DIVIDE( // Realiza la división de forma segura para calcular el porcentaje
+			        _TotalProductosAmortizados100Pct, // Numerador: cantidad de productos 100% amortizados
+			        _TotalActivosFijos, // Denominador: cantidad total de activos fijos
+			        BLANK() // Resultado si el denominador es cero (evita errores de división por cero)
+			    )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: 01. Totales
+		lineageTag: 0718c6a0-2e74-4245-9e03-be018d238eb0
+
+	measure 'Cantidad Activos Fijos 100% Amortizados' =
+			
+			COUNTROWS(
+			    FILTER(
+			        SUMMARIZE(
+			            'VALACT01_SQVI',
+			            'VALACT01_SQVI'[Txt.núm.pral.AF], // Agrupa por cada producto (activo fijo único)
+			            "TasaAmortizacionPorProducto",    // Calcula la tasa para cada producto
+			                DIVIDE(
+			                    -SUM('VALACT01_SQVI'[Amon acum.]),
+			                    SUM('VALACT01_SQVI'[Val.adq.acum.]),
+			                    BLANK()
+			                )
+			        ),
+			        [TasaAmortizacionPorProducto] >= 1    // Filtra aquellos con 100% o más de amortización
+			    )
+			)
+		formatString: #,0
+		displayFolder: 01. Totales
+		lineageTag: b6e29761-908d-482f-ace9-3e241b734838
+
+	measure 'Porcentaje Activos Fijos 100% Amortizados' = ```
+			
+			DIVIDE(
+			    [Cantidad Activos Fijos 100% Amortizados],
+			    [Tot_Activos],                              
+			    BLANK()                                     
+			)
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: 01. Totales
+		lineageTag: b14e6830-375f-4357-a9dd-8e0a470dca90
+
+	measure 'Valor Neto Contable (Sin Activos en Curso)' =
+			
+			CALCULATE(
+			    SUM(VALACT01_SQVI[Val.adq.acum.]) + SUM(VALACT01_SQVI[AmoN acum.]),
+			    FILTER(
+			        VALACT01_SQVI,
+			        VALACT01_SQVI[Denom.Cl.act.fijo] <> "Activo Fijo en curso"
+			    )
+			)
+		displayFolder: 01. Totales
+		lineageTag: 08a2edd9-393b-4822-b8f6-0c64603eefea
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tasa Amortizacion Acumulada -sin AF-' =
+			
+			CALCULATE(
+			    DIVIDE(
+			        -SUM('VALACT01_SQVI'[Amon acum.]),
+			        SUM('VALACT01_SQVI'[Val.adq.acum.]),
+			        BLANK()
+			    ),
+			    // Usamos KEEPFILTERS para mantener el filtro de la fila actual
+			    KEEPFILTERS('VALACT01_SQVI'[Denom.Cl.act.fijo] <> "Activo Fijo en curso")
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: 01. Totales
+		lineageTag: 0f722912-f90f-4689-ab50-b7bc38e8f4b4
+
+	measure 'KPI Animado - Tot_Valor_Acum.' = ```
+			
+			// --- 1. DEFINICIÓN DE DATOS ---
+			VAR ValorNumerico = [Tot_Valor_Acum.] / 1000000000
+			VAR ValorKPI = FORMAT ( ValorNumerico, "$ #,0" ) & " mil M"
+			VAR TituloKPI = "Total Acumulado"
+			VAR DescripcionKPI =
+			    LOOKUPVALUE (
+			        Tabla_Desc_KPI[Descripcion KPI],
+			        Tabla_Desc_KPI[Nombre KPI],
+			        "Total Acumulado", 
+			        "Descripción no encontrada."
+			    )
+			
+			// --- 2. ESTILOS CSS ---
+			VAR CSS_Styles = "
+			    <style>
+			        * { box-sizing: border-box; }
+			        .curtain-card {
+			            position: relative;
+			            width: 100%;
+			            font-family: 'Segoe UI';
+			            border: 1px solid #D3D3D3;
+			            
+			            /* CAMBIO: Sombra ajustada para que se vea mejor con los bordes redondeados */
+			            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+			
+			            border-radius: 8px;
+			            overflow: hidden;
+			            background-color: #182B50;
+			            color: white;
+			            height: 180px;
+			        }
+			        .curtain-content {
+			            display: flex;
+			            align-items: center;
+			            justify-content: center;
+			            text-align: center;
+			            padding: 15px;
+			            height: 100%;
+			        }
+			        .front-panel {
+			            position: absolute;
+			            top: 0;
+			            left: 0;
+			            width: 100%;
+			            height: 100%;
+			            background-color: #FFFFFF;
+			            color: black;
+			            display: flex;
+			            flex-direction: column;
+			            justify-content: center;
+			            align-items: center;
+			            transition: top 0.5s ease-in-out;
+			        }
+			        .curtain-card:hover .front-panel {
+			            top: -100%;
+			        }
+			        h1 { 
+			            margin: 0; 
+			            font-weight: bold; 
+			            color: #182B50;
+			            font-size: 32pt;
+			        }
+			        .front-panel p { 
+			            margin: 0;
+			            color: #000000;
+			            font-size: 18pt;
+			        }
+			        .curtain-content p { 
+			            color: white; 
+			            line-height: 1.4; 
+			            font-size: 13pt;
+			        }
+			    </style>
+			"
+			// --- 3. ESTRUCTURA HTML ---
+			VAR HTML_Body = "
+			    <div class='curtain-card'>
+			        <div class='curtain-content'>
+			            <p>" & DescripcionKPI & "</p>
+			        </div>
+			        <div class='front-panel'>
+			            <h1>" & ValorKPI & "</h1>
+			            <p>" & TituloKPI & "</p>
+			        </div>
+			    </div>
+			"
+			// --- 4. RESULTADO FINAL ---
+			RETURN
+			    CSS_Styles & HTML_Body
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: 0275197c-3053-4127-b08d-d22355ea5c12
+
+	measure 'KPI Animado Tot_Valor_Amort.' = ```
+			
+			// --- 1. DEFINICIÓN DE DATOS ---
+			VAR ValorNumerico = COALESCE([Tot_Valor_Amort.], 0) / 1000000000
+			VAR ValorKPI = FORMAT ( ValorNumerico, "$ #,0" ) & " mil M"
+			VAR TituloKPI = "Total Amortizado"
+			VAR DescripcionKPI =
+			    LOOKUPVALUE (
+			        Tabla_Desc_KPI[Descripcion KPI],
+			        Tabla_Desc_KPI[Nombre KPI],
+			        "Total Amortizado", 
+			        "Descripción no encontrada."
+			    )
+			
+			// --- 2. ESTILOS CSS ---
+			VAR CSS_Styles = "
+			    <style>
+			        * { box-sizing: border-box; }
+			        .curtain-card {
+			            position: relative;
+			            width: 100%;
+			            font-family: 'Segoe UI';
+			            
+			            /* Estilo de borde y sombra aplicados */
+			            border: 1px solid #D3D3D3;
+			            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+			
+			            border-radius: 8px;
+			            overflow: hidden;
+			            background-color: #182B50;
+			            color: white;
+			            height: 180px;
+			        }
+			        .curtain-content {
+			            display: flex;
+			            align-items: center;
+			            justify-content: center;
+			            text-align: center;
+			            padding: 15px;
+			            height: 100%;
+			        }
+			        .front-panel {
+			            position: absolute;
+			            top: 0;
+			            left: 0;
+			            width: 100%;
+			            height: 100%;
+			            background-color: #FFFFFF;
+			            color: black;
+			            display: flex;
+			            flex-direction: column;
+			            justify-content: center;
+			            align-items: center;
+			            transition: top 0.5s ease-in-out;
+			        }
+			        .curtain-card:hover .front-panel {
+			            top: -100%;
+			        }
+			        h1 { 
+			            margin: 0; 
+			            font-weight: bold; 
+			            color: #182B50;
+			            font-size: 32pt;
+			        }
+			        .front-panel p { 
+			            margin: 0;
+			            color: #000000;
+			            font-size: 18pt;
+			        }
+			        .curtain-content p { 
+			            color: white; 
+			            line-height: 1.4; 
+			            font-size: 13pt;
+			        }
+			    </style>
+			"
+			// --- 3. ESTRUCTURA HTML ---
+			VAR HTML_Body = "
+			    <div class='curtain-card'>
+			        <div class='curtain-content'>
+			            <p>" & DescripcionKPI & "</p>
+			        </div>
+			        <div class='front-panel'>
+			            <h1>" & ValorKPI & "</h1>
+			            <p>" & TituloKPI & "</p>
+			        </div>
+			    </div>
+			"
+			// --- 4. RESULTADO FINAL ---
+			RETURN
+			    CSS_Styles & HTML_Body
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: 43410d28-cd5c-4fa9-9c00-728bf4df9268
+
+	measure 'KPI Animado Valor Neto Contable' = ```
+			
+			// --- 1. DEFINICIÓN DE DATOS ---
+			VAR ValorNumerico = COALESCE([Valor Neto Contable], 0) / 1000000000
+			VAR ValorKPI = FORMAT ( ValorNumerico, "$ #,0" ) & " mil M"
+			VAR TituloKPI = "Valor Neto Contable"
+			VAR DescripcionKPI =
+			    LOOKUPVALUE (
+			        Tabla_Desc_KPI[Descripcion KPI],
+			        Tabla_Desc_KPI[Nombre KPI],
+			        "Valor Neto Contable", 
+			        "Descripción no encontrada."
+			    )
+			
+			// --- 2. ESTILOS CSS ---
+			VAR CSS_Styles = "
+			    <style>
+			        * { box-sizing: border-box; }
+			        .curtain-card {
+			            position: relative;
+			            width: 100%;
+			            font-family: 'Segoe UI';
+			            
+			            /* Estilo de borde y sombra aplicados */
+			            border: 1px solid #D3D3D3;
+			            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+			
+			            border-radius: 8px;
+			            overflow: hidden;
+			            background-color: #182B50;
+			            color: white;
+			            height: 180px;
+			        }
+			        .curtain-content {
+			            display: flex;
+			            align-items: center;
+			            justify-content: center;
+			            text-align: center;
+			            padding: 15px;
+			            height: 100%;
+			        }
+			        .front-panel {
+			            position: absolute;
+			            top: 0;
+			            left: 0;
+			            width: 100%;
+			            height: 100%;
+			            background-color: #FFFFFF;
+			            color: black;
+			            display: flex;
+			            flex-direction: column;
+			            justify-content: center;
+			            align-items: center;
+			            transition: top 0.5s ease-in-out;
+			        }
+			        .curtain-card:hover .front-panel {
+			            top: -100%;
+			        }
+			        h1 { 
+			            margin: 0; 
+			            font-weight: bold; 
+			            color: #182B50;
+			            font-size: 32pt;
+			        }
+			        .front-panel p { 
+			            margin: 0;
+			            color: #000000;
+			            font-size: 18pt;
+			        }
+			        .curtain-content p { 
+			            color: white; 
+			            line-height: 1.4; 
+			            font-size: 13pt;
+			        }
+			    </style>
+			"
+			// --- 3. ESTRUCTURA HTML ---
+			VAR HTML_Body = "
+			    <div class='curtain-card'>
+			        <div class='curtain-content'>
+			            <p>" & DescripcionKPI & "</p>
+			        </div>
+			        <div class='front-panel'>
+			            <h1>" & ValorKPI & "</h1>
+			            <p>" & TituloKPI & "</p>
+			        </div>
+			    </div>
+			"
+			// --- 4. RESULTADO FINAL ---
+			RETURN
+			    CSS_Styles & HTML_Body
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: dd98f06e-0b46-491a-97f1-a6dde5b93b8c
+
+	measure 'KPI Animado Tot Activos' = ```
+			
+			// --- 1. DEFINICIÓN DE DATOS ---
+			VAR ValorNumerico = COALESCE([Tot_Activos], 0)
+			
+			// CORRECCIÓN: Se quita el signo de pesos para un recuento.
+			VAR ValorKPI = FORMAT ( ValorNumerico, "#,0" )
+			
+			VAR TituloKPI = "Total de Activos"
+			VAR DescripcionKPI =
+			    LOOKUPVALUE (
+			        Tabla_Desc_KPI[Descripcion KPI],
+			        Tabla_Desc_KPI[Nombre KPI],
+			        "Total de Activos", 
+			        "Descripción no encontrada."
+			    )
+			
+			// --- 2. ESTILOS CSS ---
+			VAR CSS_Styles = "
+			    <style>
+			        * { box-sizing: border-box; }
+			        .curtain-card {
+			            position: relative;
+			            width: 100%;
+			            font-family: 'Segoe UI';
+			            
+			            /* Estilo de borde y sombra aplicados */
+			            border: 1px solid #D3D3D3;
+			            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+			
+			            border-radius: 8px;
+			            overflow: hidden;
+			            background-color: #182B50;
+			            color: white;
+			            height: 180px;
+			        }
+			        .curtain-content {
+			            display: flex;
+			            align-items: center;
+			            justify-content: center;
+			            text-align: center;
+			            padding: 15px;
+			            height: 100%;
+			        }
+			        .front-panel {
+			            position: absolute;
+			            top: 0;
+			            left: 0;
+			            width: 100%;
+			            height: 100%;
+			            background-color: #FFFFFF;
+			            color: black;
+			            display: flex;
+			            flex-direction: column;
+			            justify-content: center;
+			            align-items: center;
+			            transition: top 0.5s ease-in-out;
+			        }
+			        .curtain-card:hover .front-panel {
+			            top: -100%;
+			        }
+			        h1 { 
+			            margin: 0; 
+			            font-weight: bold; 
+			            color: #182B50;
+			            font-size: 32pt;
+			        }
+			        .front-panel p { 
+			            margin: 0;
+			            color: #000000;
+			            font-size: 18pt;
+			        }
+			        .curtain-content p { 
+			            color: white; 
+			            line-height: 1.4; 
+			            font-size: 13pt;
+			        }
+			    </style>
+			"
+			// --- 3. ESTRUCTURA HTML ---
+			VAR HTML_Body = "
+			    <div class='curtain-card'>
+			        <div class='curtain-content'>
+			            <p>" & DescripcionKPI & "</p>
+			        </div>
+			        <div class='front-panel'>
+			            <h1>" & ValorKPI & "</h1>
+			            <p>" & TituloKPI & "</p>
+			        </div>
+			    </div>
+			"
+			// --- 4. RESULTADO FINAL ---
+			RETURN
+			    CSS_Styles & HTML_Body
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: ee815ad5-30ab-47e0-9a58-c4cc58d7b094
+
+	measure 'KPI Animado Cant. Activos Fijos' = ```
+			
+			// --- 1. DEFINICIÓN DE DATOS ---
+			VAR ValorNumerico = [Cantidad Activos Fijos 100% Amortizados] / 1000000000
+			VAR ValorKPI = FORMAT ( ValorNumerico, "$ #,0" ) & " mil M"
+			VAR TituloKPI = "Activos 100% Amort."
+			VAR DescripcionKPI =
+			    LOOKUPVALUE (
+			        Tabla_Desc_KPI[Descripcion KPI],
+			        Tabla_Desc_KPI[Nombre KPI],
+			        "Activos 100% Amort.", 
+			        "Descripción no encontrada."
+			    )
+			
+			// --- 2. ESTILOS CSS ---
+			VAR CSS_Styles = "
+			    <style>
+			        * { box-sizing: border-box; }
+			        .curtain-card {
+			            position: relative;
+			            width: 100%;
+			            /* CORRECCIÓN: Se duplican las comillas para la sintaxis DAX */
+			            font-family: 'Segoe UI';
+			            border: none;
+			            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+			            border-radius: 8px;
+			            overflow: hidden;
+			            background-color: #182B50;
+			            color: white;
+			            height: 180px;
+			        }
+			        .curtain-content {
+			            display: flex;
+			            align-items: center;
+			            justify-content: center;
+			            text-align: center;
+			            padding: 15px;
+			            height: 100%;
+			        }
+			        .front-panel {
+			            position: absolute;
+			            top: 0;
+			            left: 0;
+			            width: 100%;
+			            height: 100%;
+			            background-color: #FFFFFF;
+			            color: black;
+			            display: flex;
+			            flex-direction: column;
+			            justify-content: center;
+			            align-items: center;
+			            transition: top 0.5s ease-in-out;
+			        }
+			        .curtain-card:hover .front-panel {
+			            top: -100%;
+			        }
+			        h1 { 
+			            margin: 0; 
+			            font-weight: bold; 
+			            color: #182B50;
+			            font-size: 32pt;
+			        }
+			        .front-panel p { 
+			            margin: 0;
+			            color: #000000;
+			            font-size: 18pt;
+			        }
+			        .curtain-content p { 
+			            color: white; 
+			            line-height: 1.4; 
+			            font-size: 13pt;
+			        }
+			    </style>
+			"
+			// --- 3. ESTRUCTURA HTML ---
+			VAR HTML_Body = "
+			    <div class='curtain-card'>
+			        <div class='curtain-content'>
+			            <p>" & DescripcionKPI & "</p>
+			        </div>
+			        <div class='front-panel'>
+			            <h1>" & ValorKPI & "</h1>
+			            <p>" & TituloKPI & "</p>
+			        </div>
+			    </div>
+			"
+			// --- 4. RESULTADO FINAL ---
+			RETURN
+			    CSS_Styles & HTML_Body
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: d4c34415-d7a9-472d-b1d9-4b6ad0c6bdf6
+
+	measure 'KPI Animado Activos 100% Acumulados' = ```
+			
+			// --- 1. DEFINICIÓN DE DATOS ---
+			VAR ValorNumerico = COALESCE([Cantidad Activos Fijos 100% Amortizados], 0)
+			
+			// CORRECCIÓN: Se quita el formato de moneda para un recuento de activos.
+			VAR ValorKPI = FORMAT ( ValorNumerico, "#,0" )
+			
+			VAR TituloKPI = "Activos 100% Amort."
+			VAR DescripcionKPI =
+			    LOOKUPVALUE (
+			        Tabla_Desc_KPI[Descripcion KPI],
+			        Tabla_Desc_KPI[Nombre KPI],
+			        "Activos 100% Amort.", 
+			        "Descripción no encontrada."
+			    )
+			
+			// --- 2. ESTILOS CSS ---
+			VAR CSS_Styles = "
+			    <style>
+			        * { box-sizing: border-box; }
+			        .curtain-card {
+			            position: relative;
+			            width: 100%;
+			            font-family: 'Segoe UI';
+			            
+			            /* Estilo de borde y sombra aplicados */
+			            border: 1px solid #D3D3D3;
+			            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+			
+			            border-radius: 8px;
+			            overflow: hidden;
+			            background-color: #182B50;
+			            color: white;
+			            height: 180px;
+			        }
+			        .curtain-content {
+			            display: flex;
+			            align-items: center;
+			            justify-content: center;
+			            text-align: center;
+			            padding: 15px;
+			            height: 100%;
+			        }
+			        .front-panel {
+			            position: absolute;
+			            top: 0;
+			            left: 0;
+			            width: 100%;
+			            height: 100%;
+			            background-color: #FFFFFF;
+			            color: black;
+			            display: flex;
+			            flex-direction: column;
+			            justify-content: center;
+			            align-items: center;
+			            transition: top 0.5s ease-in-out;
+			        }
+			        .curtain-card:hover .front-panel {
+			            top: -100%;
+			        }
+			        h1 { 
+			            margin: 0; 
+			            font-weight: bold; 
+			            color: #182B50;
+			            font-size: 32pt;
+			        }
+			        .front-panel p { 
+			            margin: 0;
+			            color: #000000;
+			            font-size: 18pt;
+			        }
+			        .curtain-content p { 
+			            color: white; 
+			            line-height: 1.4; 
+			            font-size: 13pt;
+			        }
+			    </style>
+			"
+			// --- 3. ESTRUCTURA HTML ---
+			VAR HTML_Body = "
+			    <div class='curtain-card'>
+			        <div class='curtain-content'>
+			            <p>" & DescripcionKPI & "</p>
+			        </div>
+			        <div class='front-panel'>
+			            <h1>" & ValorKPI & "</h1>
+			            <p>" & TituloKPI & "</p>
+			        </div>
+			    </div>
+			"
+			// --- 4. RESULTADO FINAL ---
+			RETURN
+			    CSS_Styles & HTML_Body
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: 33cbce69-ff62-4940-b0f7-6ef3dc93ec72
+
+	measure 'KPI Animado % Amort. Acum.' = ```
+			
+			// --- 1. DEFINICIÓN DE DATOS ---
+			VAR ValorNumerico = COALESCE([Tasa Amortizacion Acumulada -sin AF-], 0)
+			
+			// CORRECCIÓN: La función FORMAT con "%" ya agrega el símbolo. Se quita el extra.
+			VAR ValorKPI = FORMAT ( ValorNumerico, "0.00 %" )
+			
+			VAR TituloKPI = "% Amort. Acum."
+			VAR DescripcionKPI =
+			    LOOKUPVALUE (
+			        Tabla_Desc_KPI[Descripcion KPI],
+			        Tabla_Desc_KPI[Nombre KPI],
+			        "% Amort. Acum.", 
+			        "Descripción no encontrada."
+			    )
+			
+			// --- 2. ESTILOS CSS ---
+			VAR CSS_Styles = "
+			    <style>
+			        * { box-sizing: border-box; }
+			        .curtain-card {
+			            position: relative;
+			            width: 100%;
+			            font-family: 'Segoe UI';
+			
+			            /* CAMBIO: Se aplica el borde gris fino */
+			            border: 1px solid #D3D3D3;
+			
+			            /* CAMBIO: Se aplica la sombra suave */
+			            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+			
+			            border-radius: 8px;
+			            overflow: hidden;
+			            background-color: #182B50;
+			            color: white;
+			            height: 180px;
+			        }
+			        .curtain-content {
+			            display: flex;
+			            align-items: center;
+			            justify-content: center;
+			            text-align: center;
+			            padding: 15px;
+			            height: 100%;
+			        }
+			        .front-panel {
+			            position: absolute;
+			            top: 0;
+			            left: 0;
+			            width: 100%;
+			            height: 100%;
+			            background-color: #FFFFFF;
+			            color: black;
+			            display: flex;
+			            flex-direction: column;
+			            justify-content: center;
+			            align-items: center;
+			            transition: top 0.5s ease-in-out;
+			        }
+			        .curtain-card:hover .front-panel {
+			            top: -100%;
+			        }
+			        h1 { 
+			            margin: 0; 
+			            font-weight: bold; 
+			            color: #182B50;
+			            font-size: 32pt;
+			        }
+			        .front-panel p { 
+			            margin: 0;
+			            color: #000000;
+			            font-size: 18pt;
+			        }
+			        .curtain-content p { 
+			            color: white; 
+			            line-height: 1.4; 
+			            font-size: 13pt;
+			        }
+			    </style>
+			"
+			// --- 3. ESTRUCTURA HTML ---
+			VAR HTML_Body = "
+			    <div class='curtain-card'>
+			        <div class='curtain-content'>
+			            <p>" & DescripcionKPI & "</p>
+			        </div>
+			        <div class='front-panel'>
+			            <h1>" & ValorKPI & "</h1>
+			            <p>" & TituloKPI & "</p>
+			        </div>
+			    </div>
+			"
+			// --- 4. RESULTADO FINAL ---
+			RETURN
+			    CSS_Styles & HTML_Body
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: 4cb4afe2-9bac-429a-b044-fba57c5214d5
+
+	measure 'Matriz HTML Activos Fijos' = ```
+			
+			// --- 1. PREPARACIÓN DE LA ESTRUCTURA Y COLORES ---
+			VAR R_start = 252 VAR G_start = 186 VAR B_start = 186 // Color para el valor mínimo (rojo pálido)
+			VAR R_end = 165 VAR G_end = 0 VAR B_end = 0       // Color para el valor máximo (rojo oscuro)
+			
+			VAR EstilosYCabecera = 
+			    "
+			    <style>
+			        .tabla-activos { width: 100%; border-collapse: collapse; font-family: 'Segoe UI', sans-serif; font-size: 11pt; } /* Letra un poco más chica */
+			        /* CAMBIO: Se reduce el padding vertical para filas más finas */
+			        .tabla-activos th, .tabla-activos td { padding: 4px 8px; border-bottom: 1px solid #ddd; vertical-align: middle; }
+			        .tabla-activos th { text-align: left; font-weight: bold; border-bottom-width: 2px; border-bottom-color: #333; }
+			        .col-numero { text-align: right; }
+			        .col-barra { padding: 0px 5px !important; }
+			    </style>
+			    <table class='tabla-activos'>
+			        <thead>
+			            <tr>
+			                <th>Categoría de Activo</th>
+			                <th class='col-numero'>Acum.</th>
+			                <th class='col-numero'>Amort.</th>
+			                <th class='col-numero'>Neto Contable</th>
+			                <th class='col-numero'>% Amort. Acum.</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			    "
+			
+			// --- 2. GENERACIÓN DE LAS FILAS DE LA TABLA ---
+			VAR FilasDeLaTabla =
+			    CONCATENATEX(
+			        SUMMARIZE(
+			            'VALACT01_SQVI',
+			            'VALACT01_SQVI'[Denom.Cl.act.fijo]
+			        ),
+			        
+			        VAR CategoriaActual = 'VALACT01_SQVI'[Denom.Cl.act.fijo]
+			        
+			        VAR ValorAcum = CALCULATE([Tot_Valor_Acum.], 'VALACT01_SQVI'[Denom.Cl.act.fijo] = CategoriaActual)
+			        VAR ValorAmort = CALCULATE([Tot_Valor_Amort.], 'VALACT01_SQVI'[Denom.Cl.act.fijo] = CategoriaActual)
+			        VAR ValorNeto = CALCULATE([Valor Neto Contable (Sin Activos en Curso)], 'VALACT01_SQVI'[Denom.Cl.act.fijo] = CategoriaActual)
+			        VAR TasaAmort = CALCULATE([Tasa Amortizacion Acumulada -sin AF-], 'VALACT01_SQVI'[Denom.Cl.act.fijo] = CategoriaActual)
+			        
+			        VAR TasaAmortSegura = MIN(MAX(COALESCE(TasaAmort, 0), 0), 1)
+			
+			        // --- CAMBIO: Se reincorpora el cálculo de color dinámico ---
+			        VAR R_new = ROUND(R_start + (R_end - R_start) * TasaAmortSegura, 0)
+			        VAR G_new = ROUND(G_start + (G_end - G_start) * TasaAmortSegura, 0)
+			        VAR B_new = ROUND(B_start + (B_end - B_start) * TasaAmortSegura, 0)
+			        VAR ColorDinamico = "rgb(" & R_new & "," & G_new & "," & B_new & ")"
+			
+			        VAR AnchoBarra = FORMAT(TasaAmortSegura * 100, "0.00", "en-US") & "%"
+			
+			        VAR BarraSVG = 
+			            IF( ISBLANK(TasaAmort) || TasaAmort = 0, FORMAT(TasaAmort, "0.00 %"),
+			                "
+			                <svg width='100%' height='20' style='vertical-align: middle;'> <rect x='0' y='0' width='100%' height='100%' rx='5' fill='#f0f0f0' />
+			                    <rect x='0' y='0' width='" & AnchoBarra & "' height='100%' rx='5' fill='" & ColorDinamico & "' /> <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='black' font-size='9pt' font-weight='bold'> " & FORMAT(TasaAmort, "0.00 %") & "
+			                    </text>
+			                </svg>
+			                "
+			            )
+			        
+			        RETURN
+			        "
+			        <tr>
+			            <td>" & CategoriaActual & "</td>
+			            <td class='col-numero'>" & FORMAT(ValorAcum, "$ #,0") & "</td>
+			            <td class='col-numero'>" & FORMAT(ValorAmort, "$ #,0") & "</td>
+			            <td class='col-numero'>" & FORMAT(ValorNeto, "$ #,0") & "</td>
+			            <td class='col-barra'>" & BarraSVG & "</td>
+			        </tr>
+			        "
+			    )
+			
+			VAR PieDeTabla = "</tbody></table>"
+			
+			// --- 3. RESULTADO FINAL ---
+			RETURN EstilosYCabecera & FilasDeLaTabla & PieDeTabla
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: 4b15621e-5aec-4f96-91f5-b8b33e9732a2
+
+	measure 'Fondo Degradado Barra' = ```
+			
+			VAR Porcentaje = COALESCE([Tasa Amortizacion Acumulada -sin AF-], 0)
+			VAR Porcentaje_Clamped = MIN(MAX(Porcentaje, 0), 1)
+			
+			// Se formatea el porcentaje como un número entero para usarlo en el degradado
+			VAR PuntoDeCorte = FORMAT(Porcentaje_Clamped * 100, "0", "en-US")
+			
+			VAR ColorRojo = "#E63946"
+			VAR ColorGris = "#f0f0f0"
+			
+			// Se construye el código CSS para un degradado con un corte brusco
+			VAR GradientString = 
+			    "linear-gradient(to right, " 
+			    & ColorRojo & " " & PuntoDeCorte & "%, " 
+			    & ColorGris & " " & PuntoDeCorte & "%)"
+			
+			RETURN GradientString
+			```
+		displayFolder: 04. Medidas con Formato
+		lineageTag: 790fe908-1049-4866-b217-513fa53fe191
+
+	partition 'Tabla Medidas Mod 2' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Columnas quitadas" = Table.RemoveColumns(Origen,{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

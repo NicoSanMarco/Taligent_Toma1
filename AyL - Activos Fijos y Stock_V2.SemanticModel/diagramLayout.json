@@ -1,0 +1,138 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 607.70447029318439,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 420.05876120264179,
+            "y": 0
+          },
+          "nodeIndex": "dim_materiales",
+          "nodeLineageTag": "5ee481f4-0903-42ea-b232-b061233f09ed",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1433.0051925736468,
+            "y": 571.16102609849531
+          },
+          "nodeIndex": "almacenes",
+          "nodeLineageTag": "b75b30aa-70b8-4fa3-affe-41fc3f2004b5",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 750.42046669766978,
+            "y": 719.80945760359759
+          },
+          "nodeIndex": "centros",
+          "nodeLineageTag": "41db8be9-2e5e-4b22-81f9-9b05dacf7464",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1103.10401136074,
+            "y": 664.88855730549858
+          },
+          "nodeIndex": "centros y almacenes",
+          "nodeLineageTag": "ab761215-457c-4b7f-a818-baff0f153cc7",
+          "size": {
+            "height": 423.24788958706426,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1411.0421918297097,
+            "y": 1056.0899476738255
+          },
+          "nodeIndex": "ctas cbles",
+          "nodeLineageTag": "5e39612c-bab4-4bba-953d-5add9e970d9f",
+          "size": {
+            "height": 159.13540724164545,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1910.1066344278934,
+            "y": 521.61922950048483
+          },
+          "nodeIndex": "Tabla Medidas Mod 2",
+          "nodeLineageTag": "c263d55e-f679-4de5-8517-c9a378d062e0",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1724.5135124372305,
+            "y": 709.69490913823176
+          },
+          "nodeIndex": "VALACT01_SQVI",
+          "nodeLineageTag": "b4d80f65-b1f4-4dc9-b871-ea48c0f3a7f3",
+          "size": {
+            "height": 354.25163799817574,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 552.23351789458275,
+            "y": 956.54728959873114
+          },
+          "nodeIndex": "dim_lineas",
+          "nodeLineageTag": "ac50e1c8-cdca-46d4-9399-80fa566d0d47",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2058.0478732252514,
+            "y": 543.61267745773546
+          },
+          "nodeIndex": "Tabla_Desc_KPI",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 70.955543900968948,
+      "pinKeyFieldsToTop": true,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

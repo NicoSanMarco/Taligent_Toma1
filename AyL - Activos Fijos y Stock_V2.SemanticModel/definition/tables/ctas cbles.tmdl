@@ -1,0 +1,41 @@
+table 'ctas cbles'
+	lineageTag: 5e39612c-bab4-4bba-953d-5add9e970d9f
+
+	column SAKNR
+		dataType: string
+		lineageTag: 0f9a8b7a-c776-4bb9-a34e-0e7f21951160
+		summarizeBy: none
+		sourceColumn: SAKNR
+
+		annotation SummarizationSetBy = Automatic
+
+	column TXT20
+		dataType: string
+		lineageTag: ba1e43da-0914-4ab7-841e-3d6c5889cb2e
+		summarizeBy: none
+		sourceColumn: TXT20
+
+		annotation SummarizationSetBy = Automatic
+
+	column TXT50
+		dataType: string
+		lineageTag: bc4cb47c-58a3-4ba8-81ae-6edaf59ff85a
+		summarizeBy: none
+		sourceColumn: TXT50
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'ctas cbles' = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\Taligent\OneDrive\Escritorio\Nicolás\Taligent\Trenes Argentinos\AyL\Luis - BBDD 13-06-2025\ctas cbles.csv"),[Delimiter="	", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Encabezados promovidos",{"SAKNR", "TXT20", "TXT50"})
+				in
+				    #"Otras columnas quitadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

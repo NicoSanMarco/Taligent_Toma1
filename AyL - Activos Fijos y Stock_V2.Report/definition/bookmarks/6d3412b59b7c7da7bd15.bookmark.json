@@ -1,0 +1,1114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Stock Inv.",
+  "name": "6d3412b59b7c7da7bd15",
+  "options": {
+    "targetVisualNames": []
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "e66e52c021865ba96772",
+    "sections": {
+      "e66e52c021865ba96772": {
+        "filters": {
+          "byExpr": [
+            {
+              "name": "63b4f0bec7414d0b34d9",
+              "type": "Categorical",
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "v",
+                    "Entity": "VW_linea_centro",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "v"
+                                    }
+                                  },
+                                  "Property": "Nom_Centro"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Virtual Linea Belgrano Sur'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Virtual Linea Larg.Dist.'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Virtual Linea Mitre'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Virtual Linea Roca'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Virtual Linea San Martin'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Virtual Linea Sarmiento'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Virtual Regionales'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Virtual Adm. Central'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "VW_linea_centro"
+                    }
+                  },
+                  "Property": "Nom_Centro"
+                }
+              },
+              "howCreated": 1
+            }
+          ]
+        },
+        "visualContainers": {
+          "d418708c42b381e794a3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "663bcb44da998a581342",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VALACT01_SQVI"
+                        }
+                      },
+                      "Property": "Denom.Cl.act.fijo"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b1a4ae23d14a2e06e008",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "centros"
+                        }
+                      },
+                      "Property": "Ce."
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "centros"
+                        }
+                      },
+                      "Property": "Ce."
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "271a5d5d960844a6dc46": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "65ecbb2b54de61509b45",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VW_linea_centro"
+                        }
+                      },
+                      "Property": "Nom_Centro"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "03b8d3c94e6a3848ec58",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_lineas"
+                        }
+                      },
+                      "Property": "Línea"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_lineas"
+                        }
+                      },
+                      "Property": "Línea"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "05e98df3456a5ddb4bd3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "17c6854e1eaa85906693",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Libre Utiliz."
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "70ea789f805adbe526e8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor En Traslado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "20d4f3a540e80997b334",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor En Insp. Calid."
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9c9488292e903d294b25",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor No Libre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5fa25b4c88194b1be007",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Bloqueado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9327a83cb62d5ca961b0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_lineas"
+                        }
+                      },
+                      "Property": "Línea"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ab7516e895c9926d218d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "centros"
+                        }
+                      },
+                      "Property": "Ce."
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "787dcf4070a1ee302849",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ctas cbles"
+                        }
+                      },
+                      "Property": "TXT20"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Libre Utiliz."
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ctas cbles"
+                        }
+                      },
+                      "Property": "TXT20"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Rows"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "ctas cbles.TXT20"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    },
+                    {
+                      "queryRefs": [
+                        "dim_lineas.Línea"
+                      ],
+                      "isCollapsed": true,
+                      "identityKeys": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "dim_lineas"
+                              }
+                            },
+                            "Property": "Línea"
+                          }
+                        }
+                      ],
+                      "isPinned": true
+                    },
+                    {
+                      "queryRefs": [
+                        "centros.Ce."
+                      ],
+                      "isCollapsed": true,
+                      "identityKeys": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "centros"
+                              }
+                            },
+                            "Property": "Ce."
+                          }
+                        }
+                      ],
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ],
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "13584193b2ccc206d572": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "1f04bd46d0663b581588": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "8f774dc08d09160d38e7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b94b8d5ed1a152e231e7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Centros"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Centros"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "991487eacb1060e00731": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "219162a84a271d92d557",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Almacenes"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Almacenes"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "29c48ce53ebce100778d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1cf1be95bb860cc1b012",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Libre - Bloqueado"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Libre - Bloqueado"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "dc7b3a2d4563e0dccde3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1f2f98a0d911eb37470d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Libre Utiliz."
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Libre Utiliz."
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "be7d2ac5c610a735b1d3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e0366d193030770306d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Bloqueado"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Valor Bloqueado"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "0b08179f0239c10a80e9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "65ecbb2b54de61509b45",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VW_linea_centro"
+                        }
+                      },
+                      "Property": "Nom_Centro"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "a2b60b7b04d63c9b1da5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "almacenes"
+                        }
+                      },
+                      "Property": "Alm."
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "almacenes"
+                        }
+                      },
+                      "Property": "Alm."
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "9d9f642ce15e3a87a677": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7d13fd7500a9704aa9b5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_lineas"
+                        }
+                      },
+                      "Property": "Línea"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bcd32292302034460440",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Centros"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Centros"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_lineas"
+                        }
+                      },
+                      "Property": "Línea"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "b2de429d00c05ad25a12": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2bf9ab57904a472c09ce",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_lineas"
+                        }
+                      },
+                      "Property": "Línea"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2ee9ba544b885ca43316",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Almacenes"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Almacenes"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_lineas"
+                        }
+                      },
+                      "Property": "Línea"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "ae232012e0304e699cc5": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "6fbf75b2d7781863b01a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "8a1ff4aa306c754d252e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9648a3493e2a04c38728",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ctas cbles"
+                        }
+                      },
+                      "Property": "TXT20"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c40a6a820a1146ec6d2d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Mat_Libre_Util."
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2a068a5b22800cc55730",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Mat_Bloqueado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e09f3980d5023223c2e6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Mat_En_Insp_Calid."
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9e851e8ad3eab4005500",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Mat_No_Libre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ba01f4b8166cc30811d6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Medidas Mod 2"
+                        }
+                      },
+                      "Property": "Tot_Mat_En_Traslado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e08c719b46634b4bc839",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_lineas"
+                        }
+                      },
+                      "Property": "Línea"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "62370f9690dc40a7dc50",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "centros"
+                        }
+                      },
+                      "Property": "Ce."
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cc03f70bdc445437b830",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "almacenes"
+                        }
+                      },
+                      "Property": "Alm."
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ctas cbles"
+                        }
+                      },
+                      "Property": "TXT20"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "383c959489cccb40d9b6": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "2f2300906ad7a0a7cc3d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

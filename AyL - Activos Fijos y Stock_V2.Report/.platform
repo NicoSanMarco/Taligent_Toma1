@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "AyL - Activos Fijos y Stock_V2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ef17ff97-182d-42de-a6cb-4b6c6504aa0c"
+  }
+}

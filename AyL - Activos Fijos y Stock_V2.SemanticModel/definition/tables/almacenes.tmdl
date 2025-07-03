@@ -1,0 +1,27 @@
+table almacenes
+	lineageTag: b75b30aa-70b8-4fa3-affe-41fc3f2004b5
+
+	column 'Alm.'
+		dataType: string
+		lineageTag: c045cca2-bab9-42d8-8434-8352f6664fab
+		summarizeBy: none
+		sourceColumn: Alm.
+
+		annotation SummarizationSetBy = Automatic
+
+	partition almacenes = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\Taligent\OneDrive\Escritorio\Nicolás\Taligent\Trenes Argentinos\AyL\Luis - BBDD 13-06-2025\centros y almacenes.csv"),[Delimiter="	", Columns=24, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Libre utiliz.", Int64.Type}, {"En traslado", Int64.Type}, {"En insp.calid.", Int64.Type}, {"No libre", Int64.Type}, {"Bloqueado", Int64.Type}, {"Devoluciones", Int64.Type}, {"PrMedioVar", Currency.Type}, {"Stock total", Int64.Type}}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado",{"Alm."}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas")
+				in
+				    #"Duplicados quitados"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

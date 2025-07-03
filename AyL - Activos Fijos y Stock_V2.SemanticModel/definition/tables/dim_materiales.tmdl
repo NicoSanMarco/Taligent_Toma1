@@ -1,0 +1,45 @@
+table dim_materiales
+	isHidden
+	lineageTag: 5ee481f4-0903-42ea-b232-b061233f09ed
+
+	column CodigoMaterial
+		dataType: double
+		isHidden
+		lineageTag: 6bc2ad85-8178-43d6-9529-21c6b9f34997
+		summarizeBy: sum
+		sourceColumn: CodigoMaterial
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DescripcionMaterial
+		dataType: string
+		isHidden
+		lineageTag: 54cf3533-3c5d-4c00-bec6-e369f345780b
+		summarizeBy: none
+		sourceColumn: DescripcionMaterial
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_materiales = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=SQLite_PowerBI", [HierarchicalNavigation=true]),
+				    VW_Valor_Total_materiales_View = Origen{[Name="VW_Valor_Total_materiales",Kind="View"]}[Data],
+				    #"Otras columnas quitadas" = Table.SelectColumns(VW_Valor_Total_materiales_View,{"CodigoMaterial", "DescripcionMaterial"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas", {"CodigoMaterial"})
+				in
+				    #"Duplicados quitados"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

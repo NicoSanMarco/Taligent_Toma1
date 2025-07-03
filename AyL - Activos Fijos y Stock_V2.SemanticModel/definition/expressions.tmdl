@@ -1,0 +1,21 @@
+expression 'dim_lineas (2)' =
+		let
+		    Origen = Csv.Document(File.Contents("C:\Users\Taligent\OneDrive\Escritorio\Nicolás\Taligent\Trenes Argentinos\AyL\Luis - BBDD 13-06-2025\centros y almacenes.csv"),[Delimiter="	", Columns=24, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Libre utiliz.", Int64.Type}, {"En traslado", Int64.Type}, {"En insp.calid.", Int64.Type}, {"No libre", Int64.Type}, {"Bloqueado", Int64.Type}, {"Devoluciones", Int64.Type}, {"PrMedioVar", Currency.Type}, {"Stock total", Int64.Type}}),
+		    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado",{"Ce."}),
+		    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
+		    #"Primeros caracteres insertados" = Table.AddColumn(#"Duplicados quitados", "Primeros caracteres", each Text.Start([#"Ce."], 2), type text),
+		    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Primeros caracteres insertados",{{"Primeros caracteres", "cod_linea"}}),
+		    #"Columnas quitadas" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"Ce."}),
+		    #"Duplicados quitados1" = Table.Distinct(#"Columnas quitadas"),
+		    #"Columna condicional agregada" = Table.AddColumn(#"Duplicados quitados1", "Personalizado", each if [cod_linea] = "RE" then "Reg." else if [cod_linea] = "LM" then "Mitre" else if [cod_linea] = "BS" then "Belgrano Sur" else if [cod_linea] = "CE" then "ComEx" else if [cod_linea] = "LD" then "L. Dist." else if [cod_linea] = "LS" then "Sarmiento" else if [cod_linea] = "SM" then "San Martín" else if [cod_linea] = "LR" then "Roca" else null),
+		    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Columna condicional agregada",{{"Personalizado", type text}})
+		in
+		    #"Tipo cambiado1"
+	lineageTag: 458e42e6-db5e-4d02-b853-51e4deff3d6f
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
