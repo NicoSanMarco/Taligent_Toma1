@@ -566,16 +566,6 @@ cultureInfo es-AR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "Categoría de Material": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -831,16 +821,6 @@ cultureInfo es-AR
 			          "valor libre utiliz.": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Libre Utiliz.": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -857,16 +837,6 @@ cultureInfo es-AR
 			          "valor en traslado": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "En Traslado": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -882,16 +852,6 @@ cultureInfo es-AR
 			        {
 			          "valor en insp. calid.": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "En Insp. Calid.": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -919,16 +879,6 @@ cultureInfo es-AR
 			            },
 			            "Weight": 0.591
 			          }
-			        },
-			        {
-			          "No Libre": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -944,16 +894,6 @@ cultureInfo es-AR
 			        {
 			          "valor bloqueado": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Bloqueado": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1313,16 +1253,6 @@ cultureInfo es-AR
 			          "Tot_Mat_Libre_Util.": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Libre Utiliz.": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1346,16 +1276,6 @@ cultureInfo es-AR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
-			        },
-			        {
-			          "En Traslado": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1371,16 +1291,6 @@ cultureInfo es-AR
 			        {
 			          "Tot_Mat_En_Insp_Calid.": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "En Insp Calid.": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1415,16 +1325,6 @@ cultureInfo es-AR
 			            },
 			            "Weight": 0.599
 			          }
-			        },
-			        {
-			          "No Libre": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1447,16 +1347,6 @@ cultureInfo es-AR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Bloqueado": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
